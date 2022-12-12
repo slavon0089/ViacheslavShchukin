@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 public class CosTest extends AbstractTest {
 
+
     @DataProvider
     public static Object[][] cosCorrectData() {
         return new Object[][]{

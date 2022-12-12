@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="lesson2">
-      <change afterPath="$PROJECT_DIR$/calculator/calculator-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/AbstractTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/CosTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/DivTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/MultTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/SubTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/SumTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/addAndSubtractTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/allTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/multAndDivideTests.xml" afterDir="false" />
+    <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="1st commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/AbstractTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/CosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/CosTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/DivTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/DivTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,17 +42,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Java/Automation/calculator-1.0.jar",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Java/Automation/calculator-1.0.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Viacheslav_Shchukin\IdeaProjects\JavaAutomation\src\test\resources" />
@@ -69,9 +61,22 @@
       <recent name="C:\Users\Viacheslav_Shchukin\IdeaProjects\JavaAutomation\calculator" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SumTest">
+  <component name="RunManager" selected="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/JavaAutomation/src/test/resources/allTests.xml">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ViacheslavShchukin" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ViacheslavShchukin" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/Viacheslav_Shchukin/IdeaProjects/JavaAutomation/src/test/resources/allTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaAutomation" />
+      <module name="ViacheslavShchukin" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/allTests.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
@@ -80,8 +85,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DivTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ViacheslavShchukin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.tc.hw1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.tc.hw1" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw1.DivTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DivTest.negativeDivOnZeroDoubleTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ViacheslavShchukin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.tc.hw1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.tc.hw1" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw1.DivTest" />
+      <option name="METHOD_NAME" value="negativeDivOnZeroDoubleTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DivTest.negativeDivOnZeroLongTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaAutomation" />
+      <module name="ViacheslavShchukin" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.epam.tc.hw1.*" />
@@ -98,26 +138,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubTest.positiveSubTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.epam.tc.hw1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.epam.tc.hw1" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw1.SubTest" />
-      <option name="METHOD_NAME" value="positiveSubTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SumTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaAutomation" />
+      <module name="ViacheslavShchukin" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.epam.tc.hw1.*" />
@@ -133,31 +155,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumTest.positiveSumTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.epam.tc.hw1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.epam.tc.hw1" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw1.SumTest" />
-      <option name="METHOD_NAME" value="positiveSumTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SumTest" />
-        <item itemvalue="TestNG.SumTest.positiveSumTest" />
         <item itemvalue="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/JavaAutomation/src/test/resources/allTests.xml" />
+        <item itemvalue="TestNG.DivTest.negativeDivOnZeroDoubleTest" />
         <item itemvalue="TestNG.DivTest.negativeDivOnZeroLongTest" />
-        <item itemvalue="TestNG.SubTest.positiveSubTest" />
+        <item itemvalue="TestNG.DivTest" />
+        <item itemvalue="TestNG.SumTest" />
       </list>
     </recent_temporary>
   </component>
