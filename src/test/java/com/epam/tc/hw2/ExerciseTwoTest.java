@@ -12,14 +12,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
-import java.util.List;
 
-import static com.epam.tc.hw2.Exercise1.*;
+import static com.epam.tc.hw2.ExerciseOneTest.*;
 
-public class Exercise2 {
+public class ExerciseTwoTest {
     public static String idForDropdownServiceMenu = "dropdown";
     public static String xPathFormenuItemDifferentElements = "//a[text()='Different elements']";
     public static String xPathForCheckBoxWater = "//label[text()[contains(., ' Water')]]/*[@type='checkbox']";

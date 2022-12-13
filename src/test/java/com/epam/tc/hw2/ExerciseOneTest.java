@@ -17,7 +17,7 @@ import org.testng.asserts.SoftAssert;
 import java.time.Duration;
 import java.util.List;
 
-public class Exercise1 {
+public class ExerciseOneTest {
 
     public static WebDriver driver;
     public static SoftAssert softAssert;
