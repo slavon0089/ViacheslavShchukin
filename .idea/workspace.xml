@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="1st commit">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/Exercise1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/Exercise2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/resources/exercixes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -38,9 +46,102 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Java/Automation/calculator-1.0.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Viacheslav_Shchukin\IdeaProjects\JavaAutomation\src\test\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Viacheslav_Shchukin\IdeaProjects\JavaAutomation\calculator" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.Exercise2.exercise">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Viacheslav_Shchukin" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercixes.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Viacheslav_Shchukin" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/resources/exercixes.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise1" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Viacheslav_Shchukin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.tc.hw2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.tc.hw2" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw2.Exercise1" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Viacheslav_Shchukin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.tc.hw2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.tc.hw2" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw2.Exercise2" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise2.exercise" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Viacheslav_Shchukin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.tc.hw2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.tc.hw2" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw2.Exercise2" />
+      <option name="METHOD_NAME" value="exercise" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.Exercise2.exercise" />
+        <item itemvalue="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercixes.xml" />
+        <item itemvalue="TestNG.Exercise2" />
+        <item itemvalue="TestNG.Exercise1" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669801793836</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="lesson2">
+      <created>1670243403792</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670243403792</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -73,6 +181,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1st commit" />
+    <MESSAGE value="lesson2" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson2" />
   </component>
 </project>
