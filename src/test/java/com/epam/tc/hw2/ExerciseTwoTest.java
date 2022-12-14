@@ -1,9 +1,12 @@
 package com.epam.tc.hw2;
 
+import static com.epam.tc.hw2.ExerciseOneTest.*;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,21 +16,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
-import static com.epam.tc.hw2.ExerciseOneTest.*;
 
 public class ExerciseTwoTest {
-    public static String idForDropdownServiceMenu = "dropdown";
-    public static String xPathFormenuItemDifferentElements = "//a[text()='Different elements']";
-    public static String xPathForCheckBoxWater = "//label[text()[contains(., ' Water')]]/*[@type='checkbox']";
-    public static String xPathForCheckBoxWind = "//label[text()[contains(., ' Wind')]]/*[@type='checkbox']";
-    public static String xPathForRadioButtonSilver = "//label[text()[contains(., ' Silver')]]/*[@type='radio']";
-    public static String xPathFordropdownBlue = "//*[text()='Blue']";
-    public static String xPathForLogs = "//*[@class='panel-body-list logs']";
-    public static WebDriver driver;
-    public String URL = "https://jdi-testing.github.io/jdi-light/index.html";
+    private static String ID_DROPDOWN_SERVICE_MENU = "dropdown";
+    private static String XPATH_MENU_ITEM_DIFFERENT_ELEMENT = "//a[text()='Different elements']";
+    private static String XPATH_CHECKBOX_WATER = "//label[text()[contains(., ' Water')]]/*[@type='checkbox']";
+    private static String XPATH_CHECKBOX_WIND = "//label[text()[contains(., ' Wind')]]/*[@type='checkbox']";
+    private static String XPATH_RADIOBUTTON_SILVER = "//label[text()[contains(., ' Silver')]]/*[@type='radio']";
+    private static String XPATH_DROPDOWN_BLUE = "//*[text()='Blue']";
+    private static String XPATH_LOGS = "//*[@class='panel-body-list logs']";
 
     @BeforeTest
     static void setupAll() {
@@ -44,39 +41,39 @@ public class ExerciseTwoTest {
     @Test
     public void exercise() {
         //1. Open test site by URL
-        driver.get(URL);
+        driver.get(URL_HOME_PAGE);
         //2. Assert Browser title "Home Page"
         Assertions.assertThat(driver.getTitle())
-                .isEqualTo(homePage);
+                .isEqualTo(HOME_PAGE);
         //3. Perform login
         WebElement loginDropdown = new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(xPathForLoginDropdown)));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(XPATH_LOGIN_DROPDOWN)));
         loginDropdown.click();
-        WebElement loginInput = driver.findElement(By.xpath(xPathForLoginInput));
+        WebElement loginInput = driver.findElement(By.xpath(XPATH_LOGIN_INPUT));
         loginInput.sendKeys(loginText);
-        WebElement passwordInput = driver.findElement(By.xpath(xPathForPasswordInput));
+        WebElement passwordInput = driver.findElement(By.xpath(XPATH_PASSWORD_INPUT));
         passwordInput.sendKeys(passwordText);
-        WebElement loginSubmit = driver.findElement(By.xpath(xPathForLoginSubmit));
+        WebElement loginSubmit = driver.findElement(By.xpath(XPATH_LOGIN_SUBMIT));
         loginSubmit.click();
-        WebElement logoutButton = driver.findElement(By.xpath(xPathForLogoutSubmit));
+        WebElement logoutButton = driver.findElement(By.xpath(XPATH_LOGOUT_SUBMIT));
         boolean logoutButtonIsDisplayed = logoutButton.isDisplayed();
         Assertions.assertThat(logoutButtonIsDisplayed)
                 .isTrue();
         //4. Assert Username is loggined
-        WebElement loginName = driver.findElement(By.id(idForloginName));
+        WebElement loginName = driver.findElement(By.id(ID_LOGIN_NAME));
         Assertions.assertThat(loginName.getText())
-                .isEqualTo(loginRomanIOVLEV);
+                .isEqualTo(LOGIN_ROMAN_IOVLEV);
         //5. Open through the header menu Service -> Different Elements Page
-        WebElement dropdownServiceMenu = driver.findElement(By.className(idForDropdownServiceMenu));
+        WebElement dropdownServiceMenu = driver.findElement(By.className(ID_DROPDOWN_SERVICE_MENU));
         dropdownServiceMenu.click();
-        WebElement menuItemDifferentElements = driver.findElement(By.xpath(xPathFormenuItemDifferentElements));
+        WebElement menuItemDifferentElements = driver.findElement(By.xpath(XPATH_MENU_ITEM_DIFFERENT_ELEMENT));
         menuItemDifferentElements.click();
         Assertions.assertThat(driver.getTitle())
                 .isEqualTo("Different Elements");
         //6. Select checkboxes
-        WebElement checkBoxWater = driver.findElement(By.xpath(xPathForCheckBoxWater));
+        WebElement checkBoxWater = driver.findElement(By.xpath(XPATH_CHECKBOX_WATER));
         checkBoxWater.click();
-        WebElement checkBoxWind = driver.findElement(By.xpath(xPathForCheckBoxWind));
+        WebElement checkBoxWind = driver.findElement(By.xpath(XPATH_CHECKBOX_WIND));
         checkBoxWind.click();
         boolean statusCheckBoxWater = checkBoxWater.isSelected();
         boolean statusCheckBoxWind = checkBoxWind.isSelected();
@@ -85,25 +82,26 @@ public class ExerciseTwoTest {
         Assertions.assertThat(statusCheckBoxWind)
                 .isTrue();
         //7. Select radio
-        WebElement radioButtonSilver = driver.findElement(By.xpath(xPathForRadioButtonSilver));
+        WebElement radioButtonSilver = driver.findElement(By.xpath(XPATH_RADIOBUTTON_SILVER));
         radioButtonSilver.click();
         boolean statusRadioButtons = radioButtonSilver.isSelected();
         Assertions.assertThat(statusRadioButtons)
                 .isTrue();
         //8. Select in dropdown
-        WebElement dropdown = driver.findElement(By.xpath(xPathFordropdownBlue));
+        WebElement dropdown = driver.findElement(By.xpath(XPATH_DROPDOWN_BLUE));
         dropdown.click();
         //9. Assert that
         //• for each checkbox there is an individual log row and value is corresponded to the status of checkbox
         //• for radio button there is a log row and value is corresponded to the status of radio button
         //• for dropdown there is a log row and value is corresponded to the selected value.
-        WebElement logs = driver.findElement(By.xpath(xPathForLogs));
+        WebElement logs = driver.findElement(By.xpath(XPATH_LOGS));
         Assertions.assertThat(logs.getText())
                 .contains("Water")
                 .contains("Wind")
                 .contains("Silver")
                 .contains("Blue");
     }
+
     @AfterMethod(alwaysRun = true)
     public void browserQuit() {
         driver.quit();

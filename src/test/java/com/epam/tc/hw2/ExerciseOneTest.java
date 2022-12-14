@@ -1,6 +1,9 @@
 package com.epam.tc.hw2;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.time.Duration;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,30 +17,27 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import java.time.Duration;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 public class ExerciseOneTest {
 
+    static String XPATH_PASSWORD_INPUT = "//input[@id='password']";
+    static String XPATH_LOGIN_SUBMIT = "//button[@id='login-button']";
+    static String XPATH_LOGOUT_SUBMIT = "//*[@class='logout']";
+    static String ID_LOGIN_NAME = "user-name";
+    static String ID_FRAME = "frame";
+    static String loginText = "Roman";
+    static String passwordText = "Jdi1234";
+    static String HOME_PAGE = "Home Page";
+    static String LOGIN_ROMAN_IOVLEV = "ROMAN IOVLEV";
+    static String XPATH_LOGIN_DROPDOWN = "//*[@class='dropdown uui-profile-menu']";
+    static String XPATH_LOGIN_INPUT = "//input[@id='name']";
     public static WebDriver driver;
-    public static WebDriverWait webDriverWait;
-    public static SoftAssert softAssert;
-    public static String xPathForLoginDropdown = "//*[@class='dropdown uui-profile-menu']";
-    public static String xPathForLoginInput = "//input[@id='name']";
-    public static String xPathForPasswordInput = "//input[@id='password']";
-    public static String xPathForLoginSubmit = "//button[@id='login-button']";
-    public static String xPathForLogoutSubmit = "//*[@class='logout']";
-    public static String xPathForItemsInHeader = "//ul[@class=\"uui-navigation nav navbar-nav m-l8\"]";
-    public static String xPathForLeftMenu = "//*[@class='sidebar-menu left']";
-    public static String idForloginName = "user-name";
-    public static String idForFrame = "frame";
-    public static String idForFrameButton = "frame-button";
-    public static String loginText = "Roman";
-    public static String passwordText = "Jdi1234";
-    public static String homePage = "Home Page";
-    public static String loginRomanIOVLEV = "ROMAN IOVLEV";
-    public static String listItemsInHeader = "HOME\nCONTACT FORM\nSERVICE\nMETALS & COLORS";
+    private static WebDriverWait webDriverWait;
+    private static SoftAssert softAssert;
+    private static String XPATH_ITEMS_IN_HEADER = "//ul[@class=\"uui-navigation nav navbar-nav m-l8\"]";
+    private static String XPATH_LEFT_MENU = "//*[@class='sidebar-menu left']";
+    private static String ID_FRAME_BUTTON = "frame-button";
+    private static String LIST_ITEMS_HEADER = "HOME\nCONTACT FORM\nSERVICE\nMETALS & COLORS";
+    public static String URL_HOME_PAGE = "https://jdi-testing.github.io/jdi-light/index.html";
 
     @BeforeTest
     static void setupAll() {
@@ -54,34 +54,33 @@ public class ExerciseOneTest {
 
     @Test
     public void exercise() {
-        //1. Open test site by URL
-        String URL = "https://jdi-testing.github.io/jdi-light/index.html";
-        driver.get(URL);
+        //1. Open test site by URL_HOME_PAGE
+        driver.get(URL_HOME_PAGE);
         //2. Assert Browser title "Home Page"
         Assertions.assertThat(driver.getTitle())
-                .isEqualTo(homePage);
+                .isEqualTo(HOME_PAGE);
         //3. Perform login
         WebElement loginDropdown = new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(xPathForLoginDropdown)));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(XPATH_LOGIN_DROPDOWN)));
         loginDropdown.click();
-        WebElement loginInput = driver.findElement(By.xpath(xPathForLoginInput));
+        WebElement loginInput = driver.findElement(By.xpath(XPATH_LOGIN_INPUT));
         loginInput.sendKeys(loginText);
-        WebElement passwordInput = driver.findElement(By.xpath(xPathForPasswordInput));
+        WebElement passwordInput = driver.findElement(By.xpath(XPATH_PASSWORD_INPUT));
         passwordInput.sendKeys(passwordText);
-        WebElement loginSubmit = driver.findElement(By.xpath(xPathForLoginSubmit));
+        WebElement loginSubmit = driver.findElement(By.xpath(XPATH_LOGIN_SUBMIT));
         loginSubmit.click();
-        WebElement logoutButton = driver.findElement(By.xpath(xPathForLogoutSubmit));
+        WebElement logoutButton = driver.findElement(By.xpath(XPATH_LOGOUT_SUBMIT));
         boolean logoutButtonIsDisplayed = logoutButton.isDisplayed();
         Assertions.assertThat(logoutButtonIsDisplayed)
                 .isTrue();
         //4. Assert Username is loggined
-        WebElement loginName = driver.findElement(By.id(idForloginName));
+        WebElement loginName = driver.findElement(By.id(ID_LOGIN_NAME));
         Assertions.assertThat(loginName.getText())
-                .isEqualTo(loginRomanIOVLEV);
+                .isEqualTo(LOGIN_ROMAN_IOVLEV);
         //5. Assert that there are 4 items on the header section are displayed and they have proper texts
-        List<WebElement> itemsInHeader = driver.findElements(By.xpath(xPathForItemsInHeader));
+        List<WebElement> itemsInHeader = driver.findElements(By.xpath(XPATH_ITEMS_IN_HEADER));
         Assertions.assertThat(itemsInHeader.get(0).getText())
-                .isEqualTo(listItemsInHeader);
+                .isEqualTo(LIST_ITEMS_HEADER);
         //6. Assert that there are 4 images on the Index Page and they are displayed
         List<WebElement> listOfImages = driver.findElements(By.className("benefit-icon"));
         Assertions.assertThat(listOfImages.size())
@@ -95,22 +94,23 @@ public class ExerciseOneTest {
         Assertions.assertThat(listOfTextUnderImages.get(2).getText())
                 .isEqualTo("To be multiplatform");
         Assertions.assertThat(listOfTextUnderImages.get(3).getText())
-                .isEqualTo("Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
+                .isEqualTo("Already have good base\n(about 20 internal and\n"
+                        + "some external projects),\nwish to get more…");
         //8.  Assert that there is the iframe with “Frame Button” exist
-        WebElement frame = driver.findElement(By.id(idForFrame));
+        WebElement frame = driver.findElement(By.id(ID_FRAME));
         boolean frameIsDisplayed = frame.isDisplayed();
         Assertions.assertThat(frameIsDisplayed)
                 .isTrue();
         //9.  Switch to the iframe and check that there is “Frame Button” in the iframe
-        driver.switchTo().frame(idForFrame);
-        WebElement frameButton = driver.findElement(By.id(idForFrameButton));
+        driver.switchTo().frame(ID_FRAME);
+        WebElement frameButton = driver.findElement(By.id(ID_FRAME_BUTTON));
         boolean frameButtonIsDisplayed = frameButton.isDisplayed();
         Assertions.assertThat(frameButtonIsDisplayed)
                 .isTrue();
         //10. Switch to original window back
         driver.switchTo().parentFrame();
         //11. Assert that there are 5 items in the Left Section are displayed and they have proper text
-        WebElement leftMenu = driver.findElement(By.xpath(xPathForLeftMenu));
+        WebElement leftMenu = driver.findElement(By.xpath(XPATH_LEFT_MENU));
         Assertions.assertThat(leftMenu.getText())
                 .contains("Home")
                 .contains("Contact form")
