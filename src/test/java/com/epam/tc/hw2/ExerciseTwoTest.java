@@ -1,23 +1,17 @@
 package com.epam.tc.hw2;
 
-import static com.epam.tc.hw2.ExerciseOneTest.*;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import static com.epam.tc.hw2.ExerciseOneTest.*;
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
-public class ExerciseTwoTest {
+
+public class ExerciseTwoTest extends AbstractTest {
     private static String ID_DROPDOWN_SERVICE_MENU = "dropdown";
     private static String XPATH_MENU_ITEM_DIFFERENT_ELEMENT = "//a[text()='Different elements']";
     private static String XPATH_CHECKBOX_WATER = "//label[text()[contains(., ' Water')]]/*[@type='checkbox']";
@@ -26,17 +20,6 @@ public class ExerciseTwoTest {
     private static String XPATH_DROPDOWN_BLUE = "//*[text()='Blue']";
     private static String XPATH_LOGS = "//*[@class='panel-body-list logs']";
 
-    @BeforeTest
-    static void setupAll() {
-        WebDriverManager.chromedriver().setup();
-    }
-
-    @BeforeMethod(alwaysRun = true)
-    public static void browserDriverSetup() {
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-    }
 
     @Test
     public void exercise() {
@@ -100,11 +83,5 @@ public class ExerciseTwoTest {
                 .contains("Wind")
                 .contains("Silver")
                 .contains("Blue");
-    }
-
-    @AfterMethod(alwaysRun = true)
-    public void browserQuit() {
-        driver.quit();
-        driver = null;
     }
 }
