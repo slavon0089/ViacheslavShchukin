@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="1st commit">
+    <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="hw3 template">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/AbstractTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/CosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/CosTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/DivTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/DivTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,20 +58,7 @@
       <recent name="C:\Users\Viacheslav_Shchukin\IdeaProjects\JavaAutomation\calculator" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/JavaAutomation/src/test/resources/allTests.xml">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="ViacheslavShchukin" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="ViacheslavShchukin" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.DivTest.negativeDivOnZeroDoubleTest (1)">
     <configuration name="C:/Users/Viacheslav_Shchukin/IdeaProjects/JavaAutomation/src/test/resources/allTests.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ViacheslavShchukin" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/allTests.xml" />
@@ -85,8 +69,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DivTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ViacheslavShchukin" />
+    <configuration name="DivTest.negativeDivOnZeroDoubleTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Viacheslav_Shchukin" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.epam.tc.hw1.*" />
@@ -95,7 +79,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.epam.tc.hw1" />
       <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw1.DivTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="negativeDivOnZeroDoubleTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -113,6 +98,24 @@
       <option name="PACKAGE_NAME" value="com.epam.tc.hw1" />
       <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw1.DivTest" />
       <option name="METHOD_NAME" value="negativeDivOnZeroDoubleTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DivTest.negativeDivOnZeroLongTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Viacheslav_Shchukin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.tc.hw1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.tc.hw1" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw1.DivTest" />
+      <option name="METHOD_NAME" value="negativeDivOnZeroLongTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -138,30 +141,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ViacheslavShchukin" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.epam.tc.hw1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.epam.tc.hw1" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw1.SumTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DivTest.negativeDivOnZeroDoubleTest (1)" />
+        <item itemvalue="TestNG.DivTest.negativeDivOnZeroLongTest (1)" />
         <item itemvalue="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/JavaAutomation/src/test/resources/allTests.xml" />
         <item itemvalue="TestNG.DivTest.negativeDivOnZeroDoubleTest" />
         <item itemvalue="TestNG.DivTest.negativeDivOnZeroLongTest" />
-        <item itemvalue="TestNG.DivTest" />
-        <item itemvalue="TestNG.SumTest" />
       </list>
     </recent_temporary>
   </component>

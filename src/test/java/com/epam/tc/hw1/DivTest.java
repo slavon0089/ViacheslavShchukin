@@ -3,6 +3,7 @@ package com.epam.tc.hw1;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+import org.assertj.core.data.Percentage;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
@@ -34,7 +35,7 @@ public class DivTest extends AbstractTest {
         long b = 0;
         long result = 0;
         long act = calculator.div(a, b);
-        Assert.assertEquals(act, result, 0.0001);
+        assertThat(act).isEqualTo(result);
     }
 
     @Test
@@ -43,12 +44,7 @@ public class DivTest extends AbstractTest {
         double b = 0.0;
         double result = Double.POSITIVE_INFINITY;;
         var act = calculator.div(a, b);
-        Assert.assertEquals(act, result, 0.0001);
+        assertThat(act).isCloseTo(result, Percentage.withPercentage(0.0001));
     }
 
-    @AfterMethod
-    public void after() {
-        calculator = null;
-
-    }
 }
