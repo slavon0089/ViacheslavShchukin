@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="hw2 Clases">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/Exercise1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseOneTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/Exercise2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseTwoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/exercises.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/exercises.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseOneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseTwoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Java/Automation/calculator-1.0.jar",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -84,7 +81,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExerciseOneTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ExerciseOneTest.exercise" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Viacheslav_Shchukin" />
       <extension name="coverage">
         <pattern>
@@ -94,7 +91,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.epam.tc.hw2" />
       <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw2.ExerciseOneTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="exercise" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -139,10 +137,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercises.xml" />
+        <item itemvalue="TestNG.ExerciseOneTest.exercise" />
         <item itemvalue="TestNG.ExerciseTwoTest.exercise" />
         <item itemvalue="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercixes.xml" />
         <item itemvalue="TestNG.ExerciseTwoTest" />
-        <item itemvalue="TestNG.ExerciseOneTest" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670941650834</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="hw2 Clases">
+      <created>1670944352303</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670944352303</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import static com.epam.tc.hw2.ExerciseOneTest.*;
 
@@ -36,6 +37,7 @@ public class ExerciseTwoTest {
     @BeforeMethod(alwaysRun = true)
     public static void browserDriverSetup() {
         driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
 

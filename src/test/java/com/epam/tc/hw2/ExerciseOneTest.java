@@ -16,10 +16,12 @@ import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class ExerciseOneTest {
 
     public static WebDriver driver;
+    public static WebDriverWait webDriverWait;
     public static SoftAssert softAssert;
     public static String xPathForLoginDropdown = "//*[@class='dropdown uui-profile-menu']";
     public static String xPathForLoginInput = "//input[@id='name']";
@@ -27,7 +29,7 @@ public class ExerciseOneTest {
     public static String xPathForLoginSubmit = "//button[@id='login-button']";
     public static String xPathForLogoutSubmit = "//*[@class='logout']";
     public static String xPathForItemsInHeader = "//ul[@class=\"uui-navigation nav navbar-nav m-l8\"]";
-    public static String xPathForLeftMenuItem = "//*[@class='sidebar-menu left']/li";
+    public static String xPathForLeftMenu = "//*[@class='sidebar-menu left']";
     public static String idForloginName = "user-name";
     public static String idForFrame = "frame";
     public static String idForFrameButton = "frame-button";
@@ -46,6 +48,7 @@ public class ExerciseOneTest {
     public static void browserDriverSetup() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         softAssert = new SoftAssert();
     }
 
@@ -80,7 +83,6 @@ public class ExerciseOneTest {
         Assertions.assertThat(itemsInHeader.get(0).getText())
                 .isEqualTo(listItemsInHeader);
         //6. Assert that there are 4 images on the Index Page and they are displayed
-        driver.get("https://jdi-testing.github.io/jdi-light/index.html");
         List<WebElement> listOfImages = driver.findElements(By.className("benefit-icon"));
         Assertions.assertThat(listOfImages.size())
                 .isEqualTo(4);
@@ -108,17 +110,13 @@ public class ExerciseOneTest {
         //10. Switch to original window back
         driver.switchTo().parentFrame();
         //11. Assert that there are 5 items in the Left Section are displayed and they have proper text
-        List<WebElement> leftMenuItems = driver.findElements(By.xpath(xPathForLeftMenuItem));
-        Assertions.assertThat(leftMenuItems.get(0).getText())
-                .isEqualTo("Home");
-        Assertions.assertThat(leftMenuItems.get(1).getText())
-                .isEqualTo("Contact form");
-        Assertions.assertThat(leftMenuItems.get(2).getText())
-                .isEqualTo("Service");
-        Assertions.assertThat(leftMenuItems.get(3).getText())
-                .isEqualTo("Metals & Colors");
-        Assertions.assertThat(leftMenuItems.get(4).getText())
-                .isEqualTo("Elements packs");
+        WebElement leftMenu = driver.findElement(By.xpath(xPathForLeftMenu));
+        Assertions.assertThat(leftMenu.getText())
+                .contains("Home")
+                .contains("Contact form")
+                .contains("Service")
+                .contains("Metals & Colors")
+                .contains("Elements packs");
     }
 
     @AfterMethod(alwaysRun = true)
