@@ -6,8 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.WaitActions;
 
-import java.util.List;
-
 public class DifferentElementsPage {
 
     WaitActions waitActions;
@@ -23,6 +21,7 @@ public class DifferentElementsPage {
     public WebElement dropdownBlue;
     @FindBy(xpath = "//*[@class='panel-body-list logs']")
     public WebElement logs;
+
     public DifferentElementsPage(WebDriver driver1) {
         PageFactory.initElements(driver1, this);
         waitActions = new WaitActions(driver1);

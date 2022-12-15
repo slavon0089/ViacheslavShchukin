@@ -24,7 +24,6 @@ public class ExerciseTwoTest extends AbstractTest {
         //1. Open test site by URL
         webDriver.get(URL_HOME_PAGE);
         MainPage mainPage = new MainPage(webDriver);
-        DifferentElementsPage difElPage = new DifferentElementsPage(webDriver);
         //2. Assert Browser title "Home Page"
         Assertions.assertThat(webDriver.getTitle()).isEqualTo(HOME_PAGE);
         //3. Perform login
@@ -36,6 +35,7 @@ public class ExerciseTwoTest extends AbstractTest {
         mainPage.menuItemDifferentElements();
         Assertions.assertThat(webDriver.getTitle()).isEqualTo(DifferentElementsText);
         //6. Select checkboxes
+        DifferentElementsPage difElPage = new DifferentElementsPage(webDriver);
         difElPage.checkBoxWater.click();
         difElPage.checkBoxWind.click();
         //7. Select radio

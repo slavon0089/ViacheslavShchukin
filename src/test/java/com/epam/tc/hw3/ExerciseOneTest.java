@@ -1,11 +1,10 @@
 package com.epam.tc.hw3;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 import pages.MainPage;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ExerciseOneTest extends AbstractTest {
 
@@ -16,18 +15,18 @@ public class ExerciseOneTest extends AbstractTest {
     private static String MENU_LIST = "HOME\nCONTACT FORM\nSERVICE\nMETALS & COLORS";
     private static int countOfImagesOnMainPage = 4;
     private static List<String> textUnderImages = new ArrayList<>() {{
-        add("To include good practices\nand ideas from successful\nEPAM project");
-        add("To be flexible and\ncustomizable");
-        add("To be multiplatform");
-        add("Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
-    }};
+            add("To include good practices\nand ideas from successful\nEPAM project");
+            add("To be flexible and\ncustomizable");
+            add("To be multiplatform");
+            add("Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
+        }};
     private static List<String> leftMenuItems = new ArrayList<>() {{
-        add("Home");
-        add("Contact form");
-        add("Service");
-        add("Metals & Colors");
-        add("Elements packs");
-    }};
+            add("Home");
+            add("Contact form");
+            add("Service");
+            add("Metals & Colors");
+            add("Elements packs");
+        }};
 
     @Test
     public void exercise() {

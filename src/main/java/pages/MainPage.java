@@ -1,12 +1,11 @@
 package pages;
 
+import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.WaitActions;
-
-import java.util.List;
 
 public class MainPage {
 
@@ -23,7 +22,7 @@ public class MainPage {
     @FindBy(className = "dropdown")
     public WebElement dropdownServiceMenu;
     @FindBy(xpath = "//a[text()='Different elements']")
-    public WebElement DifferentElements;
+    public WebElement differentElements;
     WaitActions waitActions;
     @FindBy(xpath = "//*[@class='dropdown uui-profile-menu']")
     private WebElement loginDropdown;
@@ -67,6 +66,6 @@ public class MainPage {
     }
 
     public void menuItemDifferentElements() {
-        DifferentElements.click();
+        differentElements.click();
     }
 }
