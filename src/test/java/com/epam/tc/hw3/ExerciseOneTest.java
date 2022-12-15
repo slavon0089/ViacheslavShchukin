@@ -1,4 +1,4 @@
-package com.epam.tc.hw2;
+package com.epam.tc.hw3;
 
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;

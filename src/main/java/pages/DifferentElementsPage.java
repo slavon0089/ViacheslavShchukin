@@ -21,7 +21,6 @@ public class DifferentElementsPage {
     public WebElement radioButtonSilver;
     @FindBy(xpath = "//*[text()='Blue']")
     public WebElement dropdownBlue;
-
     @FindBy(xpath = "//*[@class='panel-body-list logs']")
     public WebElement logs;
     public DifferentElementsPage(WebDriver driver1) {

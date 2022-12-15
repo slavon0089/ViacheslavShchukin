@@ -1,12 +1,8 @@
-package com.epam.tc.hw2;
+package com.epam.tc.hw3;
 
 //import static com.epam.tc.hw2.ExerciseOneTest.*;
-import java.time.Duration;
+
 import org.assertj.core.api.Assertions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import pages.DifferentElementsPage;
 import pages.MainPage;

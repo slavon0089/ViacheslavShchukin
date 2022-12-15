@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="used AssertJ, removed @afterMethod in the DivTest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/DifferentElementsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/WaitActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/MainPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13-Dec-22_2_55_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13-Dec-22_2_55_PM__Changes_.xml" afterDir="false" />
+    <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="HW3 Classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/AbstractTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseOneTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseTwoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/DifferentElementsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DifferentElementsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw3/AbstractTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw3/ExerciseOneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw3/ExerciseTwoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/MainPageTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/exercises.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/exercises.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +67,7 @@
       <recent name="pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ExerciseTwoTest.exercise">
+  <component name="RunManager" selected="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercises.xml">
     <configuration name="C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercises.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Viacheslav_Shchukin" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/resources/exercises.xml" />
@@ -95,12 +92,12 @@
       <module name="Viacheslav_Shchukin" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.tc.hw2.*" />
+          <option name="PATTERN" value="com.epam.tc.hw3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.epam.tc.hw2" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw2.ExerciseOneTest" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw3.ExerciseOneTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -112,12 +109,12 @@
       <module name="Viacheslav_Shchukin" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.tc.hw2.*" />
+          <option name="PATTERN" value="com.epam.tc.hw3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.epam.tc.hw2" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw2.ExerciseOneTest" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw3.ExerciseOneTest" />
       <option name="METHOD_NAME" value="exercise" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -130,12 +127,12 @@
       <module name="Viacheslav_Shchukin" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.tc.hw2.*" />
+          <option name="PATTERN" value="com.epam.tc.hw3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.epam.tc.hw2" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw2.ExerciseTwoTest" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw3.ExerciseTwoTest" />
       <option name="METHOD_NAME" value="exercise" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -146,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercises.xml" />
         <item itemvalue="TestNG.ExerciseTwoTest.exercise" />
         <item itemvalue="TestNG.ExerciseOneTest.exercise" />
         <item itemvalue="TestNG.ExerciseOneTest" />
         <item itemvalue="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercixes.xml" />
-        <item itemvalue="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercises.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671012778382</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="HW3 Classes">
+      <created>1671115950900</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671115950900</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,6 +245,7 @@
     <MESSAGE value="changed public to private, and CAPS for constants" />
     <MESSAGE value="added parent class, deleted .* from import" />
     <MESSAGE value="deleted comments from POM file" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted comments from POM file" />
+    <MESSAGE value="HW3 Classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW3 Classes" />
   </component>
 </project>
