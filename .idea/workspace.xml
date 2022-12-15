@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="deleted comments from POM file">
+    <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="used AssertJ, removed @afterMethod in the DivTest">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/DifferentElementsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/WaitActions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/MainPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13-Dec-22_2_55_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_13-Dec-22_2_55_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/AbstractTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseOneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseTwoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="hw2" />
+        <entry key="$PROJECT_DIR$" value="hw1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,17 +48,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Java/Automation/calculator-1.0.jar",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Java/Automation/calculator-1.0.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Viacheslav_Shchukin\IdeaProjects\JavaAutomation\src\test\resources" />
@@ -56,8 +66,11 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Viacheslav_Shchukin\IdeaProjects\JavaAutomation\calculator" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pages" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercises.xml">
+  <component name="RunManager" selected="TestNG.ExerciseTwoTest.exercise">
     <configuration name="C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercises.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Viacheslav_Shchukin" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/resources/exercises.xml" />
@@ -133,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercises.xml" />
+        <item itemvalue="TestNG.ExerciseTwoTest.exercise" />
         <item itemvalue="TestNG.ExerciseOneTest.exercise" />
         <item itemvalue="TestNG.ExerciseOneTest" />
-        <item itemvalue="TestNG.ExerciseTwoTest.exercise" />
         <item itemvalue="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercixes.xml" />
+        <item itemvalue="TestNG.C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercises.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -229,16 +242,5 @@
     <MESSAGE value="added parent class, deleted .* from import" />
     <MESSAGE value="deleted comments from POM file" />
     <option name="LAST_COMMIT_MESSAGE" value="deleted comments from POM file" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseOneTest.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

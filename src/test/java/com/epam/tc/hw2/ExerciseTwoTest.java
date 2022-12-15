@@ -8,7 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
+import pages.DifferentElementsPage;
+import pages.MainPage;
 
 
 public class ExerciseTwoTest extends AbstractTest {
@@ -19,66 +20,37 @@ public class ExerciseTwoTest extends AbstractTest {
     private static String XPATH_RADIOBUTTON_SILVER = "//label[text()[contains(., ' Silver')]]/*[@type='radio']";
     private static String XPATH_DROPDOWN_BLUE = "//*[text()='Blue']";
     private static String XPATH_LOGS = "//*[@class='panel-body-list logs']";
+    private static String DifferentElementsText = "Different Elements";
 
 
     @Test
     public void exercise() {
         //1. Open test site by URL
-        driver.get(URL_HOME_PAGE);
+        webDriver.get(URL_HOME_PAGE);
+        MainPage mainPage = new MainPage(webDriver);
+        DifferentElementsPage difElPage = new DifferentElementsPage(webDriver);
         //2. Assert Browser title "Home Page"
-        Assertions.assertThat(driver.getTitle())
-                .isEqualTo(HOME_PAGE);
+        Assertions.assertThat(webDriver.getTitle()).isEqualTo(HOME_PAGE);
         //3. Perform login
-        WebElement loginDropdown = new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(XPATH_LOGIN_DROPDOWN)));
-        loginDropdown.click();
-        WebElement loginInput = driver.findElement(By.xpath(XPATH_LOGIN_INPUT));
-        loginInput.sendKeys(loginText);
-        WebElement passwordInput = driver.findElement(By.xpath(XPATH_PASSWORD_INPUT));
-        passwordInput.sendKeys(passwordText);
-        WebElement loginSubmit = driver.findElement(By.xpath(XPATH_LOGIN_SUBMIT));
-        loginSubmit.click();
-        WebElement logoutButton = driver.findElement(By.xpath(XPATH_LOGOUT_SUBMIT));
-        boolean logoutButtonIsDisplayed = logoutButton.isDisplayed();
-        Assertions.assertThat(logoutButtonIsDisplayed)
-                .isTrue();
+        mainPage.login(LOGIN_ROMAN, PASSWORD_ROMAN);
         //4. Assert Username is loggined
-        WebElement loginName = driver.findElement(By.id(ID_LOGIN_NAME));
-        Assertions.assertThat(loginName.getText())
-                .isEqualTo(LOGIN_ROMAN_IOVLEV);
+        Assertions.assertThat(mainPage.userLogged()).isTrue();
         //5. Open through the header menu Service -> Different Elements Page
-        WebElement dropdownServiceMenu = driver.findElement(By.className(ID_DROPDOWN_SERVICE_MENU));
-        dropdownServiceMenu.click();
-        WebElement menuItemDifferentElements = driver.findElement(By.xpath(XPATH_MENU_ITEM_DIFFERENT_ELEMENT));
-        menuItemDifferentElements.click();
-        Assertions.assertThat(driver.getTitle())
-                .isEqualTo("Different Elements");
+        mainPage.menuService();
+        mainPage.menuItemDifferentElements();
+        Assertions.assertThat(webDriver.getTitle()).isEqualTo(DifferentElementsText);
         //6. Select checkboxes
-        WebElement checkBoxWater = driver.findElement(By.xpath(XPATH_CHECKBOX_WATER));
-        checkBoxWater.click();
-        WebElement checkBoxWind = driver.findElement(By.xpath(XPATH_CHECKBOX_WIND));
-        checkBoxWind.click();
-        boolean statusCheckBoxWater = checkBoxWater.isSelected();
-        boolean statusCheckBoxWind = checkBoxWind.isSelected();
-        Assertions.assertThat(statusCheckBoxWater)
-                .isTrue();
-        Assertions.assertThat(statusCheckBoxWind)
-                .isTrue();
+        difElPage.checkBoxWater.click();
+        difElPage.checkBoxWind.click();
         //7. Select radio
-        WebElement radioButtonSilver = driver.findElement(By.xpath(XPATH_RADIOBUTTON_SILVER));
-        radioButtonSilver.click();
-        boolean statusRadioButtons = radioButtonSilver.isSelected();
-        Assertions.assertThat(statusRadioButtons)
-                .isTrue();
+        difElPage.radioButtonSilver.click();
         //8. Select in dropdown
-        WebElement dropdown = driver.findElement(By.xpath(XPATH_DROPDOWN_BLUE));
-        dropdown.click();
+        difElPage.dropdownBlue.click();
         //9. Assert that
         //• for each checkbox there is an individual log row and value is corresponded to the status of checkbox
         //• for radio button there is a log row and value is corresponded to the status of radio button
         //• for dropdown there is a log row and value is corresponded to the selected value.
-        WebElement logs = driver.findElement(By.xpath(XPATH_LOGS));
-        Assertions.assertThat(logs.getText())
+        Assertions.assertThat(difElPage.logs.getText())
                 .contains("Water")
                 .contains("Wind")
                 .contains("Silver")
