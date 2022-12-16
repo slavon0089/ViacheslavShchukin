@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="Validation finished">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/HeaderMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/ServiceMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw3/FluentTest.java" afterDir="false" />
+    <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="added fluent page object">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/DifferentElementsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DifferentElementsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw3/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw3/AbstractTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw3/ExerciseOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw3/ExerciseOneTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw3/ExerciseTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw3/ExerciseTwoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671123467258</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added fluent page object">
+      <created>1671197291327</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671197291327</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,6 +263,7 @@
     <MESSAGE value="deleted comments from POM file" />
     <MESSAGE value="HW3 Classes" />
     <MESSAGE value="Validation finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validation finished" />
+    <MESSAGE value="added fluent page object" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fluent page object" />
   </component>
 </project>
