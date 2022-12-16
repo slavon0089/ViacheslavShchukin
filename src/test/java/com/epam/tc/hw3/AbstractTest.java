@@ -2,6 +2,8 @@ package com.epam.tc.hw3;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,6 +21,13 @@ public class AbstractTest {
     static String PASSWORD_ROMAN = "Jdi1234";
     static String HOME_PAGE = "Home Page";
     static WebDriverWait webDriverWait;
+    public static List<String> leftMenuItems = new ArrayList<>() {{
+            add("Home");
+            add("Contact form");
+            add("Service");
+            add("Metals & Colors");
+            add("Elements packs");
+            }};
 
     @BeforeTest
     static void setupAll() {

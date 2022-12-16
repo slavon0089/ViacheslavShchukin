@@ -8,10 +8,6 @@ import pages.MainPage;
 
 public class ExerciseOneTest extends AbstractTest {
 
-
-    private static String XPATH_ITEMS_IN_HEADER = "//ul[@class=\"uui-navigation nav navbar-nav m-l8\"]";
-    private static String XPATH_LEFT_MENU = "//*[@class='sidebar-menu left']";
-    private static String ID_FRAME_BUTTON = "frame-button";
     private static String MENU_LIST = "HOME\nCONTACT FORM\nSERVICE\nMETALS & COLORS";
     private static int countOfImagesOnMainPage = 4;
     private static List<String> textUnderImages = new ArrayList<>() {{
@@ -19,13 +15,6 @@ public class ExerciseOneTest extends AbstractTest {
             add("To be flexible and\ncustomizable");
             add("To be multiplatform");
             add("Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
-        }};
-    private static List<String> leftMenuItems = new ArrayList<>() {{
-            add("Home");
-            add("Contact form");
-            add("Service");
-            add("Metals & Colors");
-            add("Elements packs");
         }};
 
     @Test

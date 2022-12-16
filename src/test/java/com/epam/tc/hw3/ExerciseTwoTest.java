@@ -1,7 +1,5 @@
 package com.epam.tc.hw3;
 
-//import static com.epam.tc.hw2.ExerciseOneTest.*;
-
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 import pages.DifferentElementsPage;
@@ -31,9 +29,9 @@ public class ExerciseTwoTest extends AbstractTest {
         //4. Assert Username is loggined
         Assertions.assertThat(mainPage.userLogged()).isTrue();
         //5. Open through the header menu Service -> Different Elements Page
-        mainPage.menuService();
-        mainPage.menuItemDifferentElements();
-        Assertions.assertThat(webDriver.getTitle()).isEqualTo(DifferentElementsText);
+        mainPage.headerMenu()
+                .serviceMenu()
+                .differentElements();
         //6. Select checkboxes
         DifferentElementsPage difElPage = new DifferentElementsPage(webDriver);
         difElPage.checkBoxWater.click();
