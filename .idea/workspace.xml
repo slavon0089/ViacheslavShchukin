@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="changed public to private, and CAPS for constants">
       <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/AbstractTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseOneTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseTwoTest.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +73,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/java/resources/exercixes.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Viacheslav_Shchukin" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/resources/exercixes.xml" />
@@ -81,6 +84,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="ExerciseOneTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Viacheslav_Shchukin" />
       <extension name="coverage">
@@ -92,6 +96,7 @@
       <option name="PACKAGE_NAME" value="com.epam.tc.hw2" />
       <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw2.ExerciseOneTest" />
       <option name="TEST_OBJECT" value="CLASS" />
+
       <properties />
       <listeners />
       <method v="2">
@@ -127,6 +132,7 @@
       <option name="PACKAGE_NAME" value="com.epam.tc.hw2" />
       <option name="MAIN_CLASS_NAME" value="com.epam.tc.hw2.ExerciseTwoTest" />
       <option name="METHOD_NAME" value="exercise" />
+
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="AllTests" verbose="1" >
+    <test name="AllTests" >
+        <classes>
+            <class name="com.epam.tc.hw1.CosTest" />
+            <class name="com.epam.tc.hw1.DivTest" />
+            <class name="com.epam.tc.hw1.MultTest" />
+            <class name="com.epam.tc.hw1.SubTest" />
+            <class name="com.epam.tc.hw1.SumTest" />
+        </classes>
+    </test>
+
+</suite>
