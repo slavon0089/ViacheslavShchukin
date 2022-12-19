@@ -1,15 +1,14 @@
 package com.epam.tc.hw2;
 
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ExerciseOneTest extends AbstractTest {
 
@@ -19,19 +18,19 @@ public class ExerciseOneTest extends AbstractTest {
     private static String ID_FRAME_BUTTON = "frame-button";
 
     private static List<String> LIST_ITEMS_HEADER = new ArrayList<>() {{
-        add("HOME");
-        add("CONTACT FORM");
-        add("SERVICE");
-        add("METALS & COLORS");
-    }};
+            add("HOME");
+            add("CONTACT FORM");
+            add("SERVICE");
+            add("METALS & COLORS");
+        }};
 
     private static List<String> LIST_ITEMS_LEFT_MENU = new ArrayList<>() {{
-        add("Home");
-        add("Contact form");
-        add("Service");
-        add("Metals & Colors");
-        add("Elements packs");
-    }};
+            add("Home");
+            add("Contact form");
+            add("Service");
+            add("Metals & Colors");
+            add("Elements packs");
+        }};
 
     @Test
     public void exercise() {
@@ -69,10 +68,12 @@ public class ExerciseOneTest extends AbstractTest {
         }
         //7. Assert that there are 4 texts on the Index Page under icons and they have proper text
         List<WebElement> listOfTextUnderImages = driver.findElements(By.className("benefit-txt"));
-        softAssert.assertEquals(listOfTextUnderImages.get(0).getText(),"To include good practices\nand ideas from successful\nEPAM project");
-        softAssert.assertEquals(listOfTextUnderImages.get(1).getText(),"To be flexible and\ncustomizable");
-        softAssert.assertEquals(listOfTextUnderImages.get(2).getText(),"To be multiplatform");
-        softAssert.assertEquals(listOfTextUnderImages.get(3).getText(),"Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
+        softAssert.assertEquals(listOfTextUnderImages.get(0).getText(), "To include good practices\n"
+               + "and ideas from successful\nEPAM project");
+        softAssert.assertEquals(listOfTextUnderImages.get(1).getText(), "To be flexible and\ncustomizable");
+        softAssert.assertEquals(listOfTextUnderImages.get(2).getText(), "To be multiplatform");
+        softAssert.assertEquals(listOfTextUnderImages.get(3).getText(), "Already have good base\n"
+               + "(about 20 internal and\nsome external projects),\nwish to get more…");
         //8.  Assert that there is the iframe with “Frame Button” exist
         WebElement frame = driver.findElement(By.id(ID_FRAME));
         softAssert.assertTrue(frame.isDisplayed());
@@ -85,8 +86,7 @@ public class ExerciseOneTest extends AbstractTest {
         //11. Assert that there are 5 items in the Left Section are displayed and they have proper text
         List<WebElement> leftMenu = driver.findElements(By.cssSelector(CSS_LEFT_MENU));
         for (int i = 0; i < leftMenu.size(); i++) {
-            System.out.println(leftMenu.get(i).getText());
-        softAssert.assertEquals(leftMenu.get(i).getText(),LIST_ITEMS_LEFT_MENU.get(i));
+            softAssert.assertEquals(leftMenu.get(i).getText(), LIST_ITEMS_LEFT_MENU.get(i));
         }
         softAssert.assertAll();
     }

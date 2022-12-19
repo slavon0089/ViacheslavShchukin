@@ -89,7 +89,7 @@
         </activation>
         <properties>
 
-            <suite.xml>${project.basedir}/src/test/java/resources/exercises.xml</suite.xml>
+            <suite.xml>${project.basedir}/src/test/resources/exercises.xml</suite.xml>
         </properties>
     </profile>
     </profiles>

@@ -3,7 +3,6 @@ package com.epam.tc.hw2;
 //import static com.epam.tc.hw2.ExerciseOneTest.*;
 import java.time.Duration;
 import java.util.List;
-
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -39,7 +38,7 @@ public class ExerciseTwoTest extends AbstractTest {
         WebElement loginSubmit = driver.findElement(By.id(ID_LOGIN_SUBMIT));
         loginSubmit.click();
         WebElement logoutButton = driver.findElement(By.className(CLASS_LOGOUT_SUBMIT));
-               Assertions.assertThat(logoutButton.isDisplayed()).isTrue();
+        Assertions.assertThat(logoutButton.isDisplayed()).isTrue();
         //4. Assert Username is loggined
         WebElement loginName = driver.findElement(By.id(ID_LOGIN_NAME));
         Assertions.assertThat(loginName.getText())

@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="fixes comments" />
+    <list default="true" id="d51962fe-5cfa-4136-ac39-ad9874b275c2" name="Changes" comment="fixes comments">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/AbstractTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/CosTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/DivTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/MultTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/SubTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw1/SumTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseOneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseTwoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/tc/hw2/ExerciseTwoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/exercises.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/exercises.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/addAndSubtractTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/allTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/multAndDivideTests.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,17 +51,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Java/Automation/calculator-1.0.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Viacheslav_Shchukin/IdeaProjects/ViacheslavShchukin/src/test/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Viacheslav_Shchukin\IdeaProjects\JavaAutomation\src\test\resources" />
@@ -197,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671459849067</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixes comments">
+      <created>1671459998194</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671459998194</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
