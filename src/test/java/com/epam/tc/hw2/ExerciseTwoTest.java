@@ -1,8 +1,7 @@
 package com.epam.tc.hw2;
 
 //import static com.epam.tc.hw2.ExerciseOneTest.*;
-import java.time.Duration;
-import java.util.List;
+
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -10,6 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+import java.util.List;
 
 
 public class ExerciseTwoTest extends AbstractTest {
@@ -19,7 +20,7 @@ public class ExerciseTwoTest extends AbstractTest {
     private static String XPATH_CHECKBOX_WIND = "//label[text()[contains(., ' Wind')]]/*[@type='checkbox']";
     private static String XPATH_RADIOBUTTON_SILVER = "//label[text()[contains(., ' Silver')]]/*[@type='radio']";
     private static String XPATH_DROPDOWN_BLUE = "//*[text()='Blue']";
-    private static String CSS_LOGS = ".panel-body-list > li";
+    private static String CSS_LOGS = ".panel-body-list.logs > li";
 
     @Test
     public void exercise() {
