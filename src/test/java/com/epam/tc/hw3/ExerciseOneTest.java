@@ -3,19 +3,28 @@ package com.epam.tc.hw3;
 import java.util.ArrayList;
 import java.util.List;
 import org.assertj.core.api.Assertions;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import pages.MainPage;
 
 public class ExerciseOneTest extends AbstractTest {
 
-    private static String MENU_LIST = "HOME\nCONTACT FORM\nSERVICE\nMETALS & COLORS";
+
+
+    private static List<String> LIST_ITEMS_HEADER =  List.of("HOME", "CONTACT FORM", "SERVICE", "METALS & COLORS");
     private static int countOfImagesOnMainPage = 4;
-    private static List<String> textUnderImages = new ArrayList<>() {{
-            add("To include good practices\nand ideas from successful\nEPAM project");
-            add("To be flexible and\ncustomizable");
-            add("To be multiplatform");
-            add("Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
-        }};
+    //    private static List<String> textUnderImages = new ArrayList<>() {{
+    //            add("To include good practices\nand ideas from successful\nEPAM project");
+    //            add("To be flexible and\ncustomizable");
+    //            add("To be multiplatform");
+    //            add("Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
+    //        }};
+    private static List<String> textUnderImages =  List
+            .of("To include good practices\nand ideas from successful\nEPAM project",
+                    "To be flexible and\ncustomizable",
+                    "To be multiplatform",
+                    "Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
 
     @Test
     public void exercise() {
@@ -27,17 +36,25 @@ public class ExerciseOneTest extends AbstractTest {
         //3. Perform login
         mainPage.login(LOGIN_ROMAN, PASSWORD_ROMAN);
         //4. Assert Username is loggined
-        Assertions.assertThat(mainPage.userLogged()).isTrue();
+        Assertions.assertThat(mainPage.userLogged()).isEqualTo(LOGIN_ROMAN_IOVLEV);
         //5. Assert that there are 4 items on the header section are displayed and they have proper texts
-        Assertions.assertThat(mainPage.menuList()).isEqualTo(MENU_LIST);
+        for (int i = 0; i < LIST_ITEMS_HEADER.size(); i++) {
+            Assertions.assertThat(mainPage.menuList().get(i).getText()).isEqualTo(LIST_ITEMS_HEADER.get(i));
+            Assertions.assertThat(mainPage.menuList().get(i).isDisplayed());
+        }
         //6. Assert that there are 4 images on the Index Page and they are displayed
         Assertions.assertThat(mainPage.listOfImages.size()).isEqualTo(countOfImagesOnMainPage);
+        for (int i = 0; i < countOfImagesOnMainPage; i++) {
+            Assertions.assertThat(mainPage.listOfImages.get(i).isDisplayed());
+        }
         //7. Assert that there are 4 texts on the Index Page under icons and they have proper text
         for (int i = 0; i < mainPage.listOfTextUnderImages.size() - 1; i++) {
             Assertions.assertThat(mainPage.listOfTextUnderImages.get(i).getText()).isEqualTo(textUnderImages.get(i));
         }
         //8.  Assert that there is the iframe with “Frame Button” exist
         Assertions.assertThat(mainPage.frame.isDisplayed()).isTrue();
+
+
         //9.  Switch to the iframe and check that there is “Frame Button” in the iframe
         webDriver.switchTo().frame(ID_FRAME);
         Assertions.assertThat(mainPage.frameButton.isDisplayed()).isTrue();

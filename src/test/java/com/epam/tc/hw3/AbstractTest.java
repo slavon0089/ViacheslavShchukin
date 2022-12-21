@@ -13,7 +13,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 public class AbstractTest {
-
+    static String CSS_PASSWORD_INPUT = "input[id='password']";
+    static String LOGIN_ROMAN_IOVLEV = "ROMAN IOVLEV";
     public static WebDriver webDriver;
     public static String URL_HOME_PAGE = "https://jdi-testing.github.io/jdi-light/index.html";
     static String ID_FRAME = "frame";
@@ -21,13 +22,16 @@ public class AbstractTest {
     static String PASSWORD_ROMAN = "Jdi1234";
     static String HOME_PAGE = "Home Page";
     static WebDriverWait webDriverWait;
-    public static List<String> leftMenuItems = new ArrayList<>() {{
-            add("Home");
-            add("Contact form");
-            add("Service");
-            add("Metals & Colors");
-            add("Elements packs");
-            }};
+    //    public static List<String> leftMenuItems = new ArrayList<>() {{
+    //            add("Home");
+    //            add("Contact form");
+    //            add("Service");
+    //            add("Metals & Colors");
+    //            add("Elements packs");
+    //            }};
+
+    public static List<String> leftMenuItems =  List
+            .of("Home", "Contact form", "Service", "Metals & Colors", "Elements packs");
 
     @BeforeTest
     static void setupAll() {

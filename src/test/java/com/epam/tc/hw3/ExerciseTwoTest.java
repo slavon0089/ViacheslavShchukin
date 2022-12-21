@@ -27,7 +27,7 @@ public class ExerciseTwoTest extends AbstractTest {
         //3. Perform login
         mainPage.login(LOGIN_ROMAN, PASSWORD_ROMAN);
         //4. Assert Username is loggined
-        Assertions.assertThat(mainPage.userLogged()).isTrue();
+        Assertions.assertThat(mainPage.userLogged()).isEqualTo(LOGIN_ROMAN_IOVLEV);
         //5. Open through the header menu Service -> Different Elements Page
         mainPage.headerMenu()
                 .serviceMenu()

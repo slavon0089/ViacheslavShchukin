@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import utils.WaitActions;
 
 public class MainPage {
+    static String LOGIN_ROMAN_IOVLEV = "ROMAN IOVLEV";
     @FindBy(className = "benefit-icon")
     public List<WebElement> listOfImages;
     @FindBy(className = "benefit-txt")
@@ -30,8 +31,8 @@ public class MainPage {
     private WebElement loginSubmit;
     @FindBy(id = "user-name")
     private WebElement loginName;
-    @FindBy(xpath = "//ul[@class=\"uui-navigation nav navbar-nav m-l8\"]")
-    private List<WebElement> horizontalMenu;
+    @FindBy(xpath = "//ul[contains(@class,'uui-navigation nav ')]/li")
+    private List<WebElement> itemsInHeader;
 
     public MainPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -46,14 +47,13 @@ public class MainPage {
         loginSubmit.click();
     }
 
-    public boolean userLogged() {
-        loginName.getText();
-        boolean loginNameIsDisplayed = loginName.isDisplayed();
-        return loginNameIsDisplayed;
+    public String userLogged() {
+
+        return loginName.getText();
     }
 
-    public String menuList() {
-        return horizontalMenu.get(0).getText();
+    public List<WebElement> menuList() {
+        return itemsInHeader;
     }
 
     public HeaderMenu headerMenu() {
