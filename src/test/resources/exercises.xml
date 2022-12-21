@@ -3,8 +3,8 @@
 <suite name="AllTests" verbose="1" >
     <test name="AllTests" >
         <classes>
-            <class name="com.epam.tc.hw1.DivTest" />
-            <class name="com.epam.tc.hw1.MultTest" />
+            <class name="com.epam.tc.hw2.ExerciseOneTest" />
+            <class name="com.epam.tc.hw2.ExerciseTwoTest" />
         </classes>
     </test>
 
