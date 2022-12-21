@@ -16,10 +16,9 @@ public class ExerciseOneTest extends AbstractTest {
     private static String XPATH_ITEMS_IN_HEADER = " //ul[contains(@class,'uui-navigation nav ')]/li";
     private static String CSS_LEFT_MENU = ".sidebar-menu > li";
     private static String ID_FRAME_BUTTON = "frame-button";
-    private static List<String> LIST_ITEMS_HEADER =  new ArrayList<>(List
-            .of("HOME", "CONTACT FORM", "SERVICE", "METALS & COLORS"));
-    private static List<String> LIST_ITEMS_LEFT_MENU =  new ArrayList<>(List
-            .of("Home", "Contact form", "Service", "Metals & Colors", "Elements packs"));
+    private static List<String> LIST_ITEMS_HEADER =  List.of("HOME", "CONTACT FORM", "SERVICE", "METALS & COLORS");
+    private static List<String> LIST_ITEMS_LEFT_MENU =  List
+            .of("Home", "Contact form", "Service", "Metals & Colors", "Elements packs");
 
 
     @Test
