@@ -19,7 +19,7 @@ public class ExerciseTwoTest extends AbstractTest {
     private static String XPATH_CHECKBOX_WIND = "//label[text()[contains(., ' Wind')]]/*[@type='checkbox']";
     private static String XPATH_RADIOBUTTON_SILVER = "//label[text()[contains(., ' Silver')]]/*[@type='radio']";
     private static String XPATH_DROPDOWN_BLUE = "//*[text()='Blue']";
-    private static String XPATH_LOGS = "//*[@class='panel-body-list logs']/li";
+    private static String CSS_LOGS = ".panel-body-list > li";
 
     @Test
     public void exercise() {
@@ -64,7 +64,7 @@ public class ExerciseTwoTest extends AbstractTest {
         //• for each checkbox there is an individual log row and value is corresponded to the status of checkbox
         //• for radio button there is a log row and value is corresponded to the status of radio button
         //• for dropdown there is a log row and value is corresponded to the selected value.
-        List<WebElement> logs = driver.findElements(By.xpath(XPATH_LOGS));
+        List<WebElement> logs = driver.findElements(By.cssSelector(CSS_LOGS));
         Assertions.assertThat(checkBoxWater.isSelected()).isTrue();
         Assertions.assertThat(checkBoxWind.isSelected()).isTrue();
         Assertions.assertThat(radioButtonSilver.isSelected()).isTrue();
