@@ -40,9 +40,9 @@ public class MainPage {
         headerMenu = new HeaderMenu(driver);
     }
 
-    public void login(String login, String password) {
+    public void login(String user, String password)  {
         loginDropdown.click();
-        loginInput.sendKeys(login);
+        loginInput.sendKeys(user);
         passwordInput.sendKeys(password);
         loginSubmit.click();
     }

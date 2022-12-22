@@ -1,8 +1,11 @@
 package com.epam.tc.hw3;
 
+import static utils.Config.getUserNameFromProperties;
+import static utils.Config.getUserPasswordFromProperties;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.io.IOException;
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
@@ -12,26 +15,23 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
+
 public class AbstractTest {
-    static String CSS_PASSWORD_INPUT = "input[id='password']";
+
     static String LOGIN_ROMAN_IOVLEV = "ROMAN IOVLEV";
     public static WebDriver webDriver;
     public static String URL_HOME_PAGE = "https://jdi-testing.github.io/jdi-light/index.html";
-    static String ID_FRAME = "frame";
-    static String LOGIN_ROMAN = "Roman";
-    static String PASSWORD_ROMAN = "Jdi1234";
     static String HOME_PAGE = "Home Page";
     static WebDriverWait webDriverWait;
-    //    public static List<String> leftMenuItems = new ArrayList<>() {{
-    //            add("Home");
-    //            add("Contact form");
-    //            add("Service");
-    //            add("Metals & Colors");
-    //            add("Elements packs");
-    //            }};
-
     public static List<String> leftMenuItems =  List
             .of("Home", "Contact form", "Service", "Metals & Colors", "Elements packs");
+    public static List<String> LIST_ITEMS_HEADER = List
+            .of("HOME", "CONTACT FORM", "SERVICE", "METALS & COLORS");
+    public String user = getUserNameFromProperties();
+    public String password = getUserPasswordFromProperties();
+
+    public AbstractTest() throws IOException {
+    }
 
     @BeforeTest
     static void setupAll() {

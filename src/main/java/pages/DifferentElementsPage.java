@@ -1,5 +1,6 @@
 package pages;
 
+import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,8 +17,8 @@ public class DifferentElementsPage {
     public WebElement radioButtonSilver;
     @FindBy(xpath = "//*[text()='Blue']")
     public WebElement dropdownBlue;
-    @FindBy(xpath = "//*[@class='panel-body-list logs']")
-    public WebElement logs;
+    @FindBy(css = ".panel-body-list.logs > li")
+    public List<WebElement> logs;
     WaitActions waitActions;
 
     public DifferentElementsPage(WebDriver driver1) {
