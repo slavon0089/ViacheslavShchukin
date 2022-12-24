@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class Config {
     public static Properties getPropertyObject() throws IOException {
-        String path = new File("src/test/java/resources/config.properties").getAbsolutePath();
+        String path = new File("src/test/resources/config.properties").getAbsolutePath();
         FileInputStream fp = new FileInputStream(path);
         Properties prop = new Properties();
         prop.load(fp);

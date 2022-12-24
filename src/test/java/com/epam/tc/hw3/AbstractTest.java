@@ -19,9 +19,7 @@ import org.testng.annotations.BeforeTest;
 
 public class AbstractTest {
 
-
     public static WebDriver webDriver;
-
     static WebDriverWait webDriverWait;
     public static List<String> leftMenuItems =  List
             .of("Home", "Contact form", "Service", "Metals & Colors", "Elements packs");
