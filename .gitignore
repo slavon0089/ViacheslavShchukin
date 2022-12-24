@@ -9,6 +9,13 @@ target/
 *.iml
 *.ipr
 
+# User-specific stuff:
+.idea/tasks.xml
+.idea/encodings.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
 ### Eclipse ###
 .apt_generated
 .classpath
