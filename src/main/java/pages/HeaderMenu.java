@@ -12,10 +12,13 @@ public class HeaderMenu {
 
     @FindBy(xpath = "//li[a='Home']")
     private WebElement homeMenu;
+
     @FindBy(xpath = "//li[a='Contact form']")
     private WebElement contactFormMenu;
+
     @FindBy(xpath = "//li[@class='dropdown']")
     private WebElement serviceSubMenu;
+
     @FindBy(xpath = "//li[a='Metals & Colors']")
     private WebElement metalsAndColoursMenu;
 
@@ -25,20 +28,20 @@ public class HeaderMenu {
         serviceMenu = new ServiceMenu(driver);
     }
 
-    public void homeMenu() {
+    public void clickHomeMenu() {
         homeMenu.click();
     }
 
-    public void contactFormMenu() {
+    public void clickContactFormMenu() {
         contactFormMenu.click();
     }
 
-    public ServiceMenu serviceMenu() {
+    public ServiceMenu clickServiceMenu() {
         serviceSubMenu.click();
         return serviceMenu;
     }
 
-    public void metalsAndColoursMenu() {
+    public void clickMetalsAndColoursMenu() {
         metalsAndColoursMenu.click();
     }
 }

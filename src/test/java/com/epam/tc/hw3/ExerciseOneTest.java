@@ -1,14 +1,19 @@
 package com.epam.tc.hw3;
 
+import static pages.MainPage.HOME_PAGE;
+import static pages.MainPage.ID_FRAME;
+import static pages.MainPage.URL_HOME_PAGE;
+
 import java.io.IOException;
 import java.util.List;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.MainPage;
 
+
 public class ExerciseOneTest extends AbstractTest {
 
-    private static  String ID_FRAME = "frame";
+
     private static int countOfImagesOnMainPage = 4;
     private static List<String> textUnderImages = List
             .of("To include good practices\nand ideas from successful\nEPAM project",
@@ -30,7 +35,7 @@ public class ExerciseOneTest extends AbstractTest {
         //3. Perform login
         mainPage.login(user, password);
         //4. Assert Username is loggined
-        softAssert.assertEquals(mainPage.userLogged(), LOGIN_ROMAN_IOVLEV);
+        softAssert.assertEquals(mainPage.userLogged(), userFullName);
         //5. Assert that there are 4 items on the header section are displayed and they have proper texts
         for (int i = 0; i < LIST_ITEMS_HEADER.size(); i++) {
             softAssert.assertEquals(mainPage.menuList().get(i).getText(), LIST_ITEMS_HEADER.get(i));

@@ -22,4 +22,8 @@ public class Config {
         return getPropertyObject().getProperty("password");
     }
 
+    public static String getUserFullNameFromProperties() throws IOException {
+        return getPropertyObject().getProperty("fullName");
+    }
+
 }

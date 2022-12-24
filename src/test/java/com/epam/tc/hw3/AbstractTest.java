@@ -1,5 +1,6 @@
 package com.epam.tc.hw3;
 
+import static utils.Config.getUserFullNameFromProperties;
 import static utils.Config.getUserNameFromProperties;
 import static utils.Config.getUserPasswordFromProperties;
 
@@ -18,10 +19,9 @@ import org.testng.annotations.BeforeTest;
 
 public class AbstractTest {
 
-    static String LOGIN_ROMAN_IOVLEV = "ROMAN IOVLEV";
+
     public static WebDriver webDriver;
-    public static String URL_HOME_PAGE = "https://jdi-testing.github.io/jdi-light/index.html";
-    static String HOME_PAGE = "Home Page";
+
     static WebDriverWait webDriverWait;
     public static List<String> leftMenuItems =  List
             .of("Home", "Contact form", "Service", "Metals & Colors", "Elements packs");
@@ -29,6 +29,7 @@ public class AbstractTest {
             .of("HOME", "CONTACT FORM", "SERVICE", "METALS & COLORS");
     public String user = getUserNameFromProperties();
     public String password = getUserPasswordFromProperties();
+    public String userFullName = getUserFullNameFromProperties();
 
     public AbstractTest() throws IOException {
     }

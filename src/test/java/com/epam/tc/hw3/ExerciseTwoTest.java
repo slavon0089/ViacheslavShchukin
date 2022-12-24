@@ -1,5 +1,8 @@
 package com.epam.tc.hw3;
 
+import static pages.MainPage.HOME_PAGE;
+import static pages.MainPage.URL_HOME_PAGE;
+
 import java.io.IOException;
 import java.util.List;
 import org.assertj.core.api.Assertions;
@@ -29,10 +32,10 @@ public class ExerciseTwoTest extends AbstractTest {
         //3. Perform login
         mainPage.login(user, password);
         //4. Assert Username is loggined
-        Assertions.assertThat(mainPage.userLogged()).isEqualTo(LOGIN_ROMAN_IOVLEV);
+        Assertions.assertThat(mainPage.userLogged()).isEqualTo(userFullName);
         //5. Open through the header menu Service -> Different Elements Page
         mainPage.headerMenu()
-                .serviceMenu()
+                .clickServiceMenu()
                 .differentElements();
         //6. Select checkboxes
         DifferentElementsPage difElPage = new DifferentElementsPage(webDriver);

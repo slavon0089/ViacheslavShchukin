@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class ServiceMenu {
     @FindBy(xpath = "//li/a[text()='Support")
     private WebElement support;
+
     @FindBy(xpath = "//li/a[text()='Different elements']")
     private WebElement differentElements;
 

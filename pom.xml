@@ -79,11 +79,6 @@
              <artifactId>webdrivermanager</artifactId>
              <version>${io.github.bonigarcia}</version>
          </dependency>
-         <dependency>
-             <groupId>junit</groupId>
-             <artifactId>junit</artifactId>
-             <version>4.12</version>
-         </dependency>
     </dependencies>
     <profiles>
     <profile>
@@ -92,7 +87,7 @@
             <activeByDefault>true</activeByDefault>
         </activation>
         <properties>
-            <suite.xml>${project.basedir}/src/test/java/resources/exercises.xml</suite.xml>
+            <suite.xml>${project.basedir}/src/test/java/resources/hw3.xml</suite.xml>
         </properties>
     </profile>
     </profiles>
