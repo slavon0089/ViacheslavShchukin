@@ -13,7 +13,6 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
@@ -53,21 +52,28 @@
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
-         </plugins>
-     </build>
-     <properties>
-         <maven.compiler.source>11</maven.compiler.source>
-         <maven.compiler.target>11</maven.compiler.target>
-         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-         <org.testng.version>7.6.1</org.testng.version>
-         <org.assertj.version>3.23.1</org.assertj.version>
-         <org.seleniumhq.selenium.version>4.6.0</org.seleniumhq.selenium.version>
-         <io.github.bonigarcia>5.3.1</io.github.bonigarcia>
+        </plugins>
+    </build>
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <org.testng.version>7.6.1</org.testng.version>
+        <org.assertj.version>3.23.1</org.assertj.version>
+        <org.seleniumhq.selenium.version>4.6.0</org.seleniumhq.selenium.version>
+        <io.github.bonigarcia>5.3.1</io.github.bonigarcia>
 
-     </properties>
+    </properties>
 
-     <dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>com.calc</groupId>
+            <artifactId>calc</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/calculator/calculator-1.0.jar</systemPath>
+        </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -80,56 +86,45 @@
             <version>${org.assertj.version}</version>
             <scope>test</scope>
         </dependency>
-         <dependency>
-             <groupId>org.seleniumhq.selenium</groupId>
-             <artifactId>selenium-java</artifactId>
-             <version>${org.seleniumhq.selenium.version}</version>
-         </dependency>
-         <dependency>
-             <groupId>io.github.bonigarcia</groupId>
-             <artifactId>webdrivermanager</artifactId>
-             <version>${io.github.bonigarcia}</version>
-         </dependency>
-         <dependency>
-             <groupId>com.calc</groupId>
-             <artifactId>calc</artifactId>
-             <version>1.0</version>
-             <scope>system</scope>
-             <systemPath>${project.basedir}/calculator/calculator-1.0.jar</systemPath>
-         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${org.seleniumhq.selenium.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${io.github.bonigarcia}</version>
+        </dependency>
     </dependencies>
-
     <profiles>
-    <profile>
-        <id>hw2</id>
-        <activation>
-            <activeByDefault>true</activeByDefault>
-        </activation>
-        <properties>
-            <suite.xml>exercises.xml</suite.xml>
-        </properties>
-    </profile>
+
         <profile>
-            <id>SumAndSub</id>
+            <id>hw2</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <suite.xml>addAndSubtractTests.xml</suite.xml>
+                <suite.xml>hw2.xml</suite.xml>
             </properties>
         </profile>
         <profile>
-            <id>MultAndDivide</id>
+            <id>hw1</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
             <properties>
-                <suite.xml>multAndDivideTest.xml</suite.xml>
+                <suite.xml>hw1addAndSubtractTests.xml</suite.xml>
             </properties>
         </profile>
         <profile>
-            <id>AllTests</id>
+            <id>hw3</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
-                <suite.xml>allTests.xml</suite.xml>
+                <suite.xml>hw3.xml</suite.xml>
             </properties>
         </profile>
     </profiles>
 </project>
-
