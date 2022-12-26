@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -56,6 +57,7 @@ public class MainPage {
         headerMenu = new HeaderMenu(driver);
     }
 
+    @Step
     public void login(String user, String password)  {
         loginDropdown.click();
         loginInput.sendKeys(user);
