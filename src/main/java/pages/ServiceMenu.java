@@ -17,11 +17,11 @@ public class ServiceMenu {
         PageFactory.initElements(driver, this);
     }
 
-    public void differentElements() {
+    public void clickDifferentElements() {
         differentElements.click();
     }
 
-    public void support() {
+    public void clickSupport() {
         support.click();
     }
 

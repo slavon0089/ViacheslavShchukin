@@ -36,7 +36,7 @@ public class ExerciseTwoTest extends AbstractTest {
         //5. Open through the header menu Service -> Different Elements Page
         mainPage.headerMenu()
                 .clickServiceMenu()
-                .differentElements();
+                .clickDifferentElements();
         //6. Select checkboxes
         DifferentElementsPage difElPage = new DifferentElementsPage(webDriver);
         difElPage.checkBoxWater.click();
