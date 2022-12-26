@@ -105,7 +105,7 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <suite.xml.file>hw2.xml</suite.xml.file>
+                <suite.xml>hw2.xml</suite.xml>
             </properties>
         </profile>
         <profile>
