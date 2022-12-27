@@ -42,7 +42,7 @@ public class AbstractTest {
         webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        webDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
+        webDriverWait = new WebDriverWait(webDriver, 10);
     }
 
     @AfterMethod(alwaysRun = true)

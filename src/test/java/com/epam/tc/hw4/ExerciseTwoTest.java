@@ -26,7 +26,7 @@ public class ExerciseTwoTest extends AbstractTest {
     public ExerciseTwoTest() throws IOException {
     }
 
-    @Test
+    @Test  (description = "second test with login")
     @Description(value = "second test with login, menu and new page")
     @Feature("feature - worked website")
     @Story("Story2")

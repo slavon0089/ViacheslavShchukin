@@ -75,9 +75,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <org.testng.version>7.6.1</org.testng.version>
         <org.assertj.version>3.23.1</org.assertj.version>
-        <org.seleniumhq.selenium.version>4.6.0</org.seleniumhq.selenium.version>
+        <org.seleniumhq.selenium.version>3.141.59</org.seleniumhq.selenium.version>
         <io.github.bonigarcia>5.3.1</io.github.bonigarcia>
-
         <aspectj.version>1.9.5</aspectj.version>
     </properties>
 
@@ -93,7 +92,7 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${org.testng.version}</version>
-            <scope>test</scope>
+
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
