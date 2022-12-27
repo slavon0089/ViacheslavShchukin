@@ -12,11 +12,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.MainPage;
 
-
-
 public class FailedTest extends AbstractTest {
-
-
     private static int countOfImagesOnMainPage = 4;
     private static List<String> textUnderImages = List
             .of("To include good practices\nand ideas from successfulEPAM project",

@@ -13,9 +13,6 @@ import org.testng.annotations.Test;
 import pages.DifferentElementsPage;
 import pages.MainPage;
 
-
-
-
 public class ExerciseTwoTest extends AbstractTest {
     private static List<String> logs = List
             .of("Colors: value changed to Blue",
