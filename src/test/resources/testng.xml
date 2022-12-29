@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="BasicSuite" verbose="2" parallel="none">
+    <!-- enable option below to stick to packages for test execution -->
+    <!-- <test name="GithubTestViaCucumberAndTestNG">
+        <packages>
+            <package name="com.epam.byta.bdd.demo.tests" />
+        </packages>
+    </test> -->
+    <test name="GithubTestViaCucumberAndTestNG">
+        <classes>
+            <class name="com.epam.byta.bdd.demo.tests.GitHubCucumberTestNGTest" />
+        </classes>
+    </test>
+</suite>
