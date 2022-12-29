@@ -121,12 +121,18 @@
             <version>1.18.24</version>
             <scope>provided</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
-            <version>1.2.6</version>
-            <type>pom</type>
+            <version>7.10.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.10.1</version>
         </dependency>
 
 
@@ -163,7 +169,7 @@
         <profile>
             <id>hw4</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
                 <suite.xml>hw4.xml</suite.xml>
