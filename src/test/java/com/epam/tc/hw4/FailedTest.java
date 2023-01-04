@@ -1,5 +1,6 @@
 package com.epam.tc.hw4;
 
+import static Steps.AbstractStep.webDriver;
 import static pages.MainPage.HOME_PAGE;
 import static pages.MainPage.ID_FRAME;
 import static pages.MainPage.URL_HOME_PAGE;

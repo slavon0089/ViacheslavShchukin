@@ -4,6 +4,8 @@ import static utils.Config.getUserFullNameFromProperties;
 import static utils.Config.getUserNameFromProperties;
 import static utils.Config.getUserPasswordFromProperties;
 
+import Steps.ActionStep;
+import Steps.AssertStep;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.io.IOException;
 import java.util.List;
@@ -14,10 +16,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.asserts.SoftAssert;
+import pages.DifferentElementsPage;
+import pages.MainPage;
+import static Steps.AbstractStep.webDriver;
 
 public class AbstractTest {
+    ActionStep actionStep = new ActionStep(webDriver);
+    AssertStep assertStep = new AssertStep(webDriver);
+    SoftAssert softAssert = new SoftAssert();
 
-    public static WebDriver webDriver;
     static WebDriverWait webDriverWait;
     public static List<String> leftMenuItems =  List
             .of("Home", "Contact form", "Service", "Metals & Colors", "Elements packs");
@@ -42,6 +50,7 @@ public class AbstractTest {
 
     @AfterMethod(alwaysRun = true)
     public void browserQuit() {
+        softAssert.assertAll();
         webDriver.quit();
         webDriver = null;
     }
