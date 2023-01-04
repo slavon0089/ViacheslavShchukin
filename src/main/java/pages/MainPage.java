@@ -9,6 +9,13 @@ import org.openqa.selenium.support.PageFactory;
 import utils.WaitActions;
 
 public class MainPage {
+
+    public static int countOfImagesOnMainPage = 4;
+    public static List<String> textUnderImages = List
+            .of("To include good practices\nand ideas from successful\nEPAM project",
+                    "To be flexible and\ncustomizable",
+                    "To be multiplatform",
+                    "Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
     @FindBy(className = "benefit-icon")
     public List<WebElement> listOfImages;
 
@@ -57,19 +64,19 @@ public class MainPage {
         headerMenu = new HeaderMenu(driver);
     }
 
-    @Step
+    @Step ("login with username and password")
     public void login(String user, String password)  {
         loginDropdown.click();
         loginInput.sendKeys(user);
         passwordInput.sendKeys(password);
         loginSubmit.click();
     }
-
+    @Step ("get logged user name")
     public String userLogged() {
 
         return loginName.getText();
     }
-
+    @Step ("get list of header menu")
     public List<WebElement> menuList() {
         return itemsInHeader;
     }
