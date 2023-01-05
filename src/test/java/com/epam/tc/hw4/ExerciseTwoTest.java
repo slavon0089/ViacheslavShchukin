@@ -1,6 +1,5 @@
 package com.epam.tc.hw4;
 
-import static Steps.AbstractStep.webDriver;
 import static pages.DifferentElementsPage.checkBoxWater;
 import static pages.DifferentElementsPage.checkBoxWind;
 import static pages.DifferentElementsPage.dropdownBlue;
@@ -13,13 +12,9 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import java.io.IOException;
-import java.util.List;
-import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
-import pages.DifferentElementsPage;
 
 public class ExerciseTwoTest extends AbstractTest {
-
 
     public ExerciseTwoTest() throws IOException {
     }

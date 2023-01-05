@@ -1,13 +1,11 @@
-package Steps;
+package steps;
 
 import io.qameta.allure.Step;
+import java.util.List;
+import org.assertj.core.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pages.DifferentElementsPage;
 import pages.MainPage;
-import java.util.List;
-
-import org.assertj.core.api.Assertions;
 
 public class AssertStep extends AbstractStep {
 
@@ -20,16 +18,17 @@ public class AssertStep extends AbstractStep {
         softAssert.assertEquals(webDriver.getTitle(), title);
     }
 
-    @Step("I assert Username is loggined")
+    @Step("I assert Username is logged")
     public void assertUserIsLogged(String userFullName) {
         mainPage = new MainPage(webDriver);
         softAssert.assertEquals(mainPage.userLogged(), userFullName);
+        softAssert.assertAll();
     }
 
     @Step("I assert that there are 4 items on the header section are displayed and they have proper texts")
-    public void assert4HeadersItems(List<String> LIST_ITEMS_HEADER) {
-        for (int i = 0; i < LIST_ITEMS_HEADER.size(); i++) {
-            softAssert.assertEquals(mainPage.menuList().get(i).getText(), LIST_ITEMS_HEADER.get(i));
+    public void assert4HeadersItems(List<String> listItemsHeader) {
+        for (int i = 0; i < listItemsHeader.size(); i++) {
+            softAssert.assertEquals(mainPage.menuList().get(i).getText(), listItemsHeader.get(i));
             softAssert.assertTrue(mainPage.menuList().get(i).isDisplayed());
         }
     }
@@ -70,11 +69,11 @@ public class AssertStep extends AbstractStep {
     public void assertElementIsSelected(WebElement element) {
         Assertions.assertThat(element.isSelected()).isTrue();
     }
+
     @Step("I check log row and value is corresponded to the selected value.")
-    public void assertLogsForElements(List <String>textForLogs) {
+    public void assertLogsForElements(List<String> textForLogs) {
         for (int i = 0; i < textForLogs.size(); i++) {
             Assertions.assertThat(difElPage.logs.get(i).getText()).contains(textForLogs.get(i));
         }
     }
-
 }

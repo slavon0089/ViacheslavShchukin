@@ -1,25 +1,22 @@
 package com.epam.tc.hw4;
 
+import static steps.AbstractStep.webDriver;
 import static utils.Config.getUserFullNameFromProperties;
 import static utils.Config.getUserNameFromProperties;
 import static utils.Config.getUserPasswordFromProperties;
 
-import Steps.ActionStep;
-import Steps.AssertStep;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
-import pages.DifferentElementsPage;
-import pages.MainPage;
-import static Steps.AbstractStep.webDriver;
+import steps.ActionStep;
+import steps.AssertStep;
 
 public class AbstractTest {
     ActionStep actionStep = new ActionStep(webDriver);
