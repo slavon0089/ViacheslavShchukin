@@ -1,8 +1,11 @@
 package com.epam.tc.hw4;
 
-import static Steps.AbstractStep.webDriver;
+import static pages.DifferentElementsPage.checkBoxWater;
+import static pages.DifferentElementsPage.checkBoxWind;
+import static pages.DifferentElementsPage.dropdownBlue;
+import static pages.DifferentElementsPage.radioButtonSilver;
+import static pages.DifferentElementsPage.textForLogs;
 import static pages.MainPage.HOME_PAGE;
-import static pages.MainPage.ID_FRAME;
 import static pages.MainPage.URL_HOME_PAGE;
 
 import io.qameta.allure.Feature;
@@ -10,8 +13,6 @@ import io.qameta.allure.Story;
 import java.io.IOException;
 import java.util.List;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import pages.MainPage;
 
 public class FailedTest extends AbstractTest {
     private static int countOfImagesOnMainPage = 4;
@@ -28,41 +29,31 @@ public class FailedTest extends AbstractTest {
     @Feature("feature - worked website")
     @Story("Story3 - broken")
     public void exercise() {
-        SoftAssert softAssert = new SoftAssert();
         //1. Open test site by URL
-        webDriver.get(URL_HOME_PAGE);
-        MainPage mainPage = new MainPage(webDriver);
+        actionStep.openWebSite(URL_HOME_PAGE);
         //2. Assert Browser title "Home Page"
-        softAssert.assertEquals(webDriver.getTitle(), HOME_PAGE);
+        assertStep.assertBrowserTitle(HOME_PAGE);
         //3. Perform login
-        mainPage.login(user, password);
-        //4. Assert Username is loggined
-        softAssert.assertEquals(mainPage.userLogged(), userFullName);
-        //5. Assert that there are 4 items on the header section are displayed and they have proper texts
-        for (int i = 0; i < LIST_ITEMS_HEADER.size(); i++) {
-            softAssert.assertEquals(mainPage.menuList().get(i).getText(), LIST_ITEMS_HEADER.get(i));
-            softAssert.assertTrue(mainPage.menuList().get(i).isDisplayed());
-        }
-        //6. Assert that there are 4 images on the Index Page and they are displayed
-        softAssert.assertEquals(mainPage.listOfImages.size(), countOfImagesOnMainPage);
-        for (int i = 0; i < countOfImagesOnMainPage; i++) {
-            softAssert.assertTrue(mainPage.listOfImages.get(i).isDisplayed());
-        }
-        //7. Assert that there are 4 texts on the Index Page under icons and they have proper text
-        for (int i = 0; i < mainPage.listOfTextUnderImages.size() - 1; i++) {
-            softAssert.assertEquals(mainPage.listOfTextUnderImages.get(i).getText(), textUnderImages.get(i));
-        }
-        //8.  Assert that there is the iframe with “Frame Button” exist
-        softAssert.assertTrue(mainPage.frame.isDisplayed());
-        //9.  Switch to the iframe and check that there is “Frame Button” in the iframe
-        webDriver.switchTo().frame(ID_FRAME);
-        softAssert.assertTrue(mainPage.frameButton.isDisplayed());
-        //10. Switch to original window back
-        webDriver.switchTo().parentFrame();
-        //11. Assert that there are 5 items in the Left Section are displayed and they have proper text
-        for (int i = 0; i < mainPage.leftMenu.size() - 1; i++) {
-            softAssert.assertEquals(mainPage.leftMenu.get(i).getText(), leftMenuItems.get(i));
-        }
-        softAssert.assertAll();
+        actionStep.performLogin(password, password);
+        //4. Assert Username is logged
+        assertStep.assertUserIsLogged(userFullName);
+        //5. Open through the header menu Service -> Different Elements Page
+        actionStep.openDifferentElementsPage();
+        //6. Select checkboxes
+        actionStep.selectCheckbox(checkBoxWater);
+        actionStep.selectCheckbox(checkBoxWind);
+        //7. Select radio
+        actionStep.selectRadioButton(radioButtonSilver);
+        //8. Select in dropdown
+        actionStep.selectDropDownColor(dropdownBlue);
+        //9. Assert that
+        //• for each checkbox there is an individual log row and value is corresponded to the status of checkbox
+        //• for radio button there is a log row and value is corresponded to the status of radio button
+        //• for dropdown there is a log row and value is corresponded to the selected value.
+        assertStep.assertElementIsSelected(checkBoxWater);
+        assertStep.assertElementIsSelected(checkBoxWind);
+        assertStep.assertElementIsSelected(radioButtonSilver);
+        assertStep.assertElementIsSelected(dropdownBlue);
+        assertStep.assertLogsForElements(textForLogs);
     }
 }

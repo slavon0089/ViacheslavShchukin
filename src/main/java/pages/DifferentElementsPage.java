@@ -20,17 +20,15 @@ public class DifferentElementsPage {
 
     @FindBy(xpath = "//*[text()='Blue']")
     public static WebElement dropdownBlue;
-
     @FindBy(css = ".panel-body-list.logs > li")
     public List<WebElement> logs;
-
-    WaitActions waitActions;
 
     public static List<String> textForLogs = List
             .of("Colors: value changed to Blue",
                     "metal: value changed to Silver",
                     "Wind: condition changed to true",
                     "Water: condition changed to true");
+    WaitActions waitActions;
 
     public DifferentElementsPage(WebDriver driver1) {
         PageFactory.initElements(driver1, this);

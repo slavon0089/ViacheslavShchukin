@@ -1,4 +1,4 @@
-package Steps;
+package steps;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,6 @@ import pages.DifferentElementsPage;
 import pages.MainPage;
 
 public class ActionStep extends AbstractStep {
-
 
     public ActionStep(WebDriver driver) {
         super(driver);
@@ -35,7 +34,7 @@ public class ActionStep extends AbstractStep {
     }
 
     @Step("I open through the header menu Service -> Different Elements Page")
-    public void openDifferentElementsPage(){
+    public void openDifferentElementsPage() {
         mainPage.headerMenu()
                 .clickServiceMenu()
                 .clickDifferentElements();
@@ -43,18 +42,17 @@ public class ActionStep extends AbstractStep {
     }
 
     @Step("Select checkbox")
-    public void selectCheckbox(WebElement element){
-
+    public void selectCheckbox(WebElement element) {
         element.click();
     }
 
     @Step("Select radiobutton")
-    public void selectRadioButton(WebElement element){
+    public void selectRadioButton(WebElement element) {
         element.click();
     }
 
     @Step("select dropdown")
-    public void selectDropDownColor(WebElement element){
+    public void selectDropDownColor(WebElement element) {
         element.click();
     }
 }

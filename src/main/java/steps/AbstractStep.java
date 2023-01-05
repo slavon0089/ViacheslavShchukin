@@ -1,4 +1,4 @@
-package Steps;
+package steps;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
