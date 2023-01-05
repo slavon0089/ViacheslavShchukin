@@ -3,12 +3,7 @@ package com.epam.tc.hw4;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
-import pages.MainPage;
-
 import java.io.IOException;
-import java.util.List;
-
-import static Steps.AbstractStep.webDriver;
 import static pages.MainPage.HOME_PAGE;
 import static pages.MainPage.ID_FRAME;
 import static pages.MainPage.URL_HOME_PAGE;
@@ -23,7 +18,6 @@ public class ExerciseOneTest extends AbstractTest {
     @Feature("feature - worked website")
     @Story("Story1")
     public void exercise() {
-        MainPage mainPage = new MainPage(webDriver);
         //1. Open test site by URL
         actionStep.openWebSite(URL_HOME_PAGE);
         //2. Assert Browser title "Home Page"
@@ -47,5 +41,6 @@ public class ExerciseOneTest extends AbstractTest {
         actionStep.switchToParentWindow();
         //11. Assert that there are 5 items in the Left Section are displayed and they have proper text
         assertStep.assert5itemsInLeftSectionIsDisplayed(leftMenuItems);
+
     }
 }

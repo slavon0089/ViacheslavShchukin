@@ -2,20 +2,21 @@ package Steps;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import pages.DifferentElementsPage;
 import pages.MainPage;
-
 import java.util.List;
 
+import org.assertj.core.api.Assertions;
+
 public class AssertStep extends AbstractStep {
-    public MainPage mainPage;
 
     public AssertStep(WebDriver driver) {
         super(driver);
     }
 
-    @Step(" Assert Browser title Home Page")
+    @Step("Assert Browser title Home Page")
     public void assertBrowserTitle(String title) {
-        //2. Assert Browser title "Home Page"
         softAssert.assertEquals(webDriver.getTitle(), title);
     }
 
@@ -25,7 +26,7 @@ public class AssertStep extends AbstractStep {
         softAssert.assertEquals(mainPage.userLogged(), userFullName);
     }
 
-    @Step(" I assert that there are 4 items on the header section are displayed and they have proper texts")
+    @Step("I assert that there are 4 items on the header section are displayed and they have proper texts")
     public void assert4HeadersItems(List<String> LIST_ITEMS_HEADER) {
         for (int i = 0; i < LIST_ITEMS_HEADER.size(); i++) {
             softAssert.assertEquals(mainPage.menuList().get(i).getText(), LIST_ITEMS_HEADER.get(i));
@@ -64,4 +65,16 @@ public class AssertStep extends AbstractStep {
             softAssert.assertEquals(mainPage.leftMenu.get(i).getText(), leftMenuItems.get(i));
         }
     }
+
+    @Step("I check selected elements")
+    public void assertElementIsSelected(WebElement element) {
+        Assertions.assertThat(element.isSelected()).isTrue();
+    }
+    @Step("I check log row and value is corresponded to the selected value.")
+    public void assertLogsForElements(List <String>textForLogs) {
+        for (int i = 0; i < textForLogs.size(); i++) {
+            Assertions.assertThat(difElPage.logs.get(i).getText()).contains(textForLogs.get(i));
+        }
+    }
+
 }
