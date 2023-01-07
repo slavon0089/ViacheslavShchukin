@@ -11,7 +11,7 @@ public class WaitActions {
     private WebDriverWait webDriverWait;
 
     public WaitActions(WebDriver webDriver) {
-        webDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
+        webDriverWait = new WebDriverWait(webDriver, 10);
     }
 
     public Boolean waitUntilCondition(Function<WebDriver, Boolean> p) {

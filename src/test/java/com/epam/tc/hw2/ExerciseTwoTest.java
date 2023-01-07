@@ -26,7 +26,7 @@ public class ExerciseTwoTest extends AbstractTest {
         //2. Assert Browser title "Home Page"
         Assertions.assertThat(driver.getTitle()).isEqualTo(HOME_PAGE);
         //3. Perform login
-        WebElement loginDropdown = new WebDriverWait(driver, Duration.ofSeconds(5))
+        WebElement loginDropdown = new WebDriverWait(driver, 5)
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(CLASS_LOGIN_DROPDOWN)));
         loginDropdown.click();
         WebElement loginInput = driver.findElement(By.xpath(XPATH_LOGIN_INPUT));

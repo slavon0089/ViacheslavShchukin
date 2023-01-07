@@ -50,7 +50,21 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${project.basedir}/src/test/resources/${suite.xml}</suiteXmlFile>
                     </suiteXmlFiles>
+                    <argLine>-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"</argLine>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.12.0</version>
             </plugin>
         </plugins>
     </build>
@@ -61,9 +75,9 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <org.testng.version>7.6.1</org.testng.version>
         <org.assertj.version>3.23.1</org.assertj.version>
-        <org.seleniumhq.selenium.version>4.6.0</org.seleniumhq.selenium.version>
+        <org.seleniumhq.selenium.version>3.141.59</org.seleniumhq.selenium.version>
         <io.github.bonigarcia>5.3.1</io.github.bonigarcia>
-
+        <aspectj.version>1.9.5</aspectj.version>
     </properties>
 
     <dependencies>
@@ -78,13 +92,13 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${org.testng.version}</version>
-            <scope>test</scope>
+
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${org.assertj.version}</version>
-            <scope>test</scope>
+
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -95,6 +109,17 @@
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>${io.github.bonigarcia}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.20.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
     <profiles>
@@ -120,10 +145,19 @@
         <profile>
             <id>hw3</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
                 <suite.xml>hw3.xml</suite.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>hw4</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>hw4.xml</suite.xml>
             </properties>
         </profile>
     </profiles>
