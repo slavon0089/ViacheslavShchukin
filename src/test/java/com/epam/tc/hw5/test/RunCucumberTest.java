@@ -1,11 +1,11 @@
-package com.epam.tc.hw5.step;
+package com.epam.tc.hw5.test;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"com/epam/tc/hw5/step"},
+        glue = {"com/epam/tc/hw5/test"},
         publish = true)
 
 public class RunCucumberTest extends AbstractTestNGCucumberTests {

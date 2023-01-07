@@ -5,7 +5,7 @@
 
     <test name="GithubTestViaCucumberAndTestNG">
         <classes>
-            <class name="com.epam.tc.hw5.step.RunCucumberTest" />
+            <class name="com.epam.tc.hw5.test.RunCucumberTest" />
         </classes>
     </test>
 </suite>
