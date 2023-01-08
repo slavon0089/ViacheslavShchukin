@@ -9,8 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.assertj.core.api.Assertions;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import pages.MainPage;
 import pages.UserTablePage;
 
@@ -149,6 +151,12 @@ public class AssertStep extends AbstractStep {
         for (int i = 0; i < userTablePage.firstDropdownValues.size(); i++) {
             Assertions.assertThat(userTablePage.firstDropdownValues.get(i).getText().equals(dropdownOptions.get(i)));
         }
+    }
+
+    public void assertLogText(String logText) {
+        By logPath = new By.ByXPath("//li[contains(. ,'" + logText + "')]");
+        WebElement log = webDriver.findElement(logPath);
+        Assert.assertTrue(log.isDisplayed());
     }
 
 }

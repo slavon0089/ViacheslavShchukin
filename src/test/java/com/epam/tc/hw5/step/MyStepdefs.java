@@ -1,5 +1,6 @@
 package com.epam.tc.hw5.step;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static pages.DifferentElementsPage.checkBoxWater;
 import static pages.DifferentElementsPage.checkBoxWind;
 import static pages.DifferentElementsPage.dropdownYellow;
@@ -20,6 +21,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.MainPage;
 import pages.ServiceMenu;
 import steps.AbstractStep;
 import steps.ActionStep;
@@ -104,27 +106,30 @@ public class MyStepdefs extends AbstractStep {
     }
 
     @And("I login as user {string}")
-    public void loginAsUser(String romaniovlev) throws IOException {
+    public void loginAsUser(String user) throws IOException {
+        mainPage = new MainPage(webDriver);
         RomanIovlev romanIovlev = new RomanIovlev();
         actionStep.performLogin(romanIovlev.userName, romanIovlev.password);
+        assertThat(mainPage.userLogged().equals(user.toUpperCase()));
     }
 
     @When("I click on {string} button in Header")
-    public void clickOnButtonInHeader(String arg0) {
-        actionStep.clickServiceMenu();
+    public void clickOnButtonInHeader(String item) {
+        actionStep.clickMenuItem(item);
         serviceMenu = new ServiceMenu(webDriver);
     }
 
     @And("I click on {string} button in Service dropdown")
-    public void clickOnButtonInServiceDropdown(String arg0) {
+    public void clickOnButtonInServiceDropdown(String item) {
         actionStep.openUserTablePage();
     }
 
     @Then("{string} page should be opened")
     public void pageShouldBeOpened(String string) {
         assertStep.assertBrowserTitle(USER_TABLE_PAGE);
-
     }
+
+
 
     @And("{int} Number Type Dropdowns should be displayed on Users Table on User Table Page")
     public void numberTypeDropdownsShouldBeDisplayedOnUsersTableOnUserTablePage(int count) {
@@ -156,6 +161,16 @@ public class MyStepdefs extends AbstractStep {
     @And("droplist should contain values in column Type for user Roman")
     public void droplistShouldContainValuesInColumnTypeForUserRoman(DataTable dataTable) {
         assertStep.assertDropListContainsValuesForUserRoman(dataTable);
+    }
+
+    @When("I select vip checkbox for {string}")
+    public void iSelectVipCheckboxFor(String name) {
+        actionStep.selectOneVipCheckbox(name);
+    }
+
+    @Then("1 log row has {string} text in log section")
+    public void logRowHasTextInLogSection(String log) {
+        assertStep.assertLogText(log);
     }
 
     @After()
