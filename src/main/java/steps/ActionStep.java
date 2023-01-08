@@ -6,9 +6,11 @@ import org.openqa.selenium.WebElement;
 import pages.DifferentElementsPage;
 import pages.MainPage;
 
+import java.io.IOException;
+
 public class ActionStep extends AbstractStep {
 
-    public ActionStep(WebDriver driver) {
+    public ActionStep(WebDriver driver) throws IOException {
         super(driver);
     }
 

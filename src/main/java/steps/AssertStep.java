@@ -1,6 +1,8 @@
 package steps;
 
 import io.qameta.allure.Step;
+
+import java.io.IOException;
 import java.util.List;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +11,7 @@ import pages.MainPage;
 
 public class AssertStep extends AbstractStep {
 
-    public AssertStep(WebDriver driver) {
+    public AssertStep(WebDriver driver) throws IOException {
         super(driver);
     }
 
