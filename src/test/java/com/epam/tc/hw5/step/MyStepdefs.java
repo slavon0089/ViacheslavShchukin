@@ -164,7 +164,7 @@ public class MyStepdefs extends AbstractStep {
     }
 
     @When("I select vip checkbox for {string}")
-    public void iSelectVipCheckboxFor(String name) {
+    public void selectVipCheckboxFor(String name) {
         actionStep.selectOneVipCheckbox(name);
     }
 
