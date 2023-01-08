@@ -1,12 +1,13 @@
 package steps;
 
 import io.qameta.allure.Step;
+import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.DifferentElementsPage;
 import pages.MainPage;
+import pages.ServiceMenu;
 
-import java.io.IOException;
 
 public class ActionStep extends AbstractStep {
 
@@ -56,5 +57,17 @@ public class ActionStep extends AbstractStep {
     @Step("select dropdown")
     public void selectDropDownColor(WebElement element) {
         element.click();
+    }
+
+    public void clickServiceMenu() {
+        mainPage.headerMenu()
+                .clickServiceMenu();
+    }
+
+    @Step("I open user table from service menu")
+    public void openUserTablePage() {
+        serviceMenu = new ServiceMenu(webDriver);
+        serviceMenu.clickUserTable();
+        difElPage = new DifferentElementsPage(webDriver);
     }
 }

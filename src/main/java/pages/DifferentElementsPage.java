@@ -35,7 +35,7 @@ public class DifferentElementsPage {
                     "Wind: condition changed to true",
                     "Water: condition changed to true");
 
-    public static List<String> textForLogsHW5 = List
+    public static List<String> textForLogsYellowSelenWindWater = List
             .of("Colors: value changed to Yellow",
                     "metal: value changed to Selen",
                     "Wind: condition changed to true",
