@@ -4,19 +4,29 @@
     <parameter name="hub" value="http://192.168.137.1:4444/wd/hub"/>
 
     <test name="chrome tests" group-by-instances="true">
-        <parameter name="isLocal" value="true"/>
+        <parameter name="isLocal" value="true"></parameter>
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.epam.tc.hw6.ExerciseOneTest" />
-<!--            <class name="com.epam.tc.hw6.ExerciseTwoTest" />-->
+            <class name="com.epam.tc.hw6.ExerciseTwoTest" />
         </classes>
     </test>
 
     <test name="firefox tests" group-by-instances="true">
+        <parameter name="isLocal" value="true"></parameter>
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="com.epam.tc.hw6.ExerciseOneTest" />
-<!--            <class name="com.epam.tc.hw6.ExerciseTwoTest" />-->
+            <class name="com.epam.tc.hw6.ExerciseTwoTest" />
+        </classes>
+    </test>
+
+    <test name="opera tests" group-by-instances="true">
+        <parameter name="isLocal" value="true"></parameter>
+        <parameter name="browser" value="opera"/>
+        <classes>
+            <class name="com.epam.tc.hw6.ExerciseOneTest" />
+            <class name="com.epam.tc.hw6.ExerciseTwoTest" />
         </classes>
     </test>
 
