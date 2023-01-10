@@ -1,5 +1,13 @@
 package com.epam.tc.hw6;
 
+import static steps.AbstractStep.webDriver;
+import static utils.Config.getUserFullNameFromProperties;
+import static utils.Config.getUserNameFromProperties;
+import static utils.Config.getUserPasswordFromProperties;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
@@ -11,14 +19,6 @@ import org.testng.asserts.SoftAssert;
 import steps.ActionStep;
 import steps.AssertStep;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import static steps.AbstractStep.webDriver;
-import static utils.Config.getUserFullNameFromProperties;
-import static utils.Config.getUserNameFromProperties;
-import static utils.Config.getUserPasswordFromProperties;
 
 public class AbstractTest {
     public static List<String> leftMenuItems = List

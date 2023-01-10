@@ -1,6 +1,8 @@
 package com.epam.tc.hw6;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.net.URL;
+import java.util.Locale;
 import lombok.NonNull;
 import lombok.SneakyThrows;
 import lombok.experimental.UtilityClass;
@@ -10,9 +12,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import java.net.URL;
-import java.util.Locale;
 
 @UtilityClass
 public class DriverFabric {
@@ -44,13 +43,4 @@ public class DriverFabric {
 
     }
 
-//    private static WebDriver createChrome() {
-//        WebDriverManager.chromedriver().setup();
-//        return new ChromeDriver();
-//    }
-//
-//    private static WebDriver createFirefox() {
-//        WebDriverManager.firefoxdriver().setup();
-//        return new FirefoxDriver();
-//    }
 }

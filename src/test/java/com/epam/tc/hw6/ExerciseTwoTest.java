@@ -1,12 +1,5 @@
 package com.epam.tc.hw6;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
-import org.testng.annotations.Test;
-
-import java.io.IOException;
-
 import static pages.DifferentElementsPage.checkBoxWater;
 import static pages.DifferentElementsPage.checkBoxWind;
 import static pages.DifferentElementsPage.dropdownBlue;
@@ -14,6 +7,13 @@ import static pages.DifferentElementsPage.radioButtonSilver;
 import static pages.DifferentElementsPage.textForLogs;
 import static pages.MainPage.HOME_PAGE;
 import static pages.MainPage.URL_HOME_PAGE;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
+import java.io.IOException;
+import org.testng.annotations.Test;
+
 
 public class ExerciseTwoTest extends AbstractTest {
 

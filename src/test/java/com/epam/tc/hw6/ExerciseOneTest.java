@@ -1,16 +1,16 @@
 package com.epam.tc.hw6;
 
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
-import org.testng.annotations.Test;
-
-import java.io.IOException;
-
 import static pages.MainPage.HOME_PAGE;
 import static pages.MainPage.ID_FRAME;
 import static pages.MainPage.URL_HOME_PAGE;
 import static pages.MainPage.countOfImagesOnMainPage;
 import static pages.MainPage.textUnderImages;
+
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
+import java.io.IOException;
+import org.testng.annotations.Test;
+
 
 public class ExerciseOneTest extends AbstractTest {
 
