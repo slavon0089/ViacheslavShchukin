@@ -3,12 +3,11 @@ package jdi.pages;
 import com.epam.jdi.light.elements.complex.WebList;
 import com.epam.jdi.light.elements.composite.WebPage;
 import com.epam.jdi.light.elements.pageobjects.annotations.locators.Css;
+import java.util.ArrayList;
+import java.util.List;
 import jdi.entities.MetalsAndColors;
 import jdi.forms.MetalsAndColorsForm;
 import org.assertj.core.api.Assertions;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MetalsAndColorsPage extends WebPage {
 

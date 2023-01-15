@@ -2,13 +2,12 @@ package jdi;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jdi.entities.MetalsAndColors;
-import org.testng.annotations.DataProvider;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import jdi.entities.MetalsAndColors;
+import org.testng.annotations.DataProvider;
 
 public class DataProviderMetalsAndColors {
 

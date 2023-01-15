@@ -20,13 +20,14 @@ public class JdiSite {
     public static void openHomePage() {
         homePage.open();
     }
+
     public static void login(User user) {
         homePage.login(user);
     }
 
 
     public static String getUserName() {
-       return homePage.getUserName();
+        return homePage.getUserName();
     }
 
     public static void openMetalsAndColorsPage() {
