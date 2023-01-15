@@ -78,6 +78,11 @@
         <org.seleniumhq.selenium.version>3.141.59</org.seleniumhq.selenium.version>
         <io.github.bonigarcia>5.3.1</io.github.bonigarcia>
         <aspectj.version>1.9.5</aspectj.version>
+        <allure-testng.version>2.20.1</allure-testng.version>
+        <webdrivermanager.version>5.3.1</webdrivermanager.version>
+        <lombok.version>1.18.24</lombok.version>
+        <cucumber-testng.version>7.10.1</cucumber-testng.version>
+        <cucumber-java.version>7.10.1</cucumber-java.version>
     </properties>
 
     <dependencies>
@@ -92,13 +97,11 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${org.testng.version}</version>
-
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${org.assertj.version}</version>
-
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -113,17 +116,32 @@
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
-            <version>2.20.1</version>
+            <version>${allure-testng.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber-testng.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber-java.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
+        </dependency>
+
     </dependencies>
     <profiles>
-
         <profile>
             <id>hw2</id>
             <activation>
@@ -154,10 +172,28 @@
         <profile>
             <id>hw4</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
                 <suite.xml>hw4.xml</suite.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>hw5</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>hw5.xml</suite.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>hw6</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>hw6.xml</suite.xml>
             </properties>
         </profile>
     </profiles>

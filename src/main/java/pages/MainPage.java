@@ -1,13 +1,15 @@
 package pages;
 
+import static steps.AbstractStep.webDriver;
+
 import io.qameta.allure.Step;
 import java.util.List;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.WaitActions;
-
 
 public class MainPage {
 
@@ -45,6 +47,9 @@ public class MainPage {
     @FindBy(xpath = "//ul[contains(@class,'uui-navigation nav ')]/li")
     private List<WebElement> itemsInHeader;
 
+    @FindBy(partialLinkText = "SERVICE")
+    private WebElement serviceHeaderItem;
+
 
     public MainPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -73,5 +78,15 @@ public class MainPage {
 
     public HeaderMenu headerMenu() {
         return headerMenu;
+    }
+
+    public void clickOnServiceItem() {
+        serviceHeaderItem.click();
+    }
+
+    public void clickServiceMenuItem(String item) {
+        By serviceMenuItemPath = new By.ByXPath("//a[contains(text(),'" + item + "')]");
+        WebElement serviceMenuItem = webDriver.findElement(serviceMenuItemPath);
+        serviceMenuItem.click();
     }
 }

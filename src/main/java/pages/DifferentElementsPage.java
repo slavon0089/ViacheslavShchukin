@@ -18,8 +18,18 @@ public class DifferentElementsPage {
     @FindBy(xpath = "//label[text()[contains(., ' Silver')]]/*[@type='radio']")
     public static WebElement radioButtonSilver;
 
+    @FindBy(xpath = "//label[text()[contains(., ' Selen')]]/*[@type='radio']")
+    public static WebElement radioButtonSelen;
+
     @FindBy(xpath = "//*[text()='Blue']")
     public static WebElement dropdownBlue;
+
+    @FindBy(xpath = "//*[text()='Yellow']")
+    public static WebElement dropdownYellow;
+
+    @FindBy(xpath = "//*[text()='Blue']")
+    public static WebElement dropdownBlue;
+
     @FindBy(css = ".panel-body-list.logs > li")
     public List<WebElement> logs;
 
@@ -28,6 +38,14 @@ public class DifferentElementsPage {
                     "metal: value changed to Silver",
                     "Wind: condition changed to true",
                     "Water: condition changed to true");
+
+
+    public static List<String> textForLogsYellowSelenWindWater = List
+            .of("Colors: value changed to Yellow",
+                    "metal: value changed to Selen",
+                    "Wind: condition changed to true",
+                    "Water: condition changed to true");
+
     WaitActions waitActions;
 
     public DifferentElementsPage(WebDriver driver1) {

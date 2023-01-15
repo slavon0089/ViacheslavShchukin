@@ -10,6 +10,9 @@ public class ServiceMenu {
     @FindBy(xpath = "//li/a[text()='Support")
     private WebElement support;
 
+    @FindBy(xpath = "//li/a[text()='User Table ']")
+    private WebElement userTable;
+
     @FindBy(xpath = "//li/a[text()='Different elements']")
     private WebElement differentElements;
 
@@ -23,6 +26,10 @@ public class ServiceMenu {
 
     public void clickSupport() {
         support.click();
+    }
+
+    public void clickUserTable() {
+        userTable.click();
     }
 
 }
