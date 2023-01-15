@@ -14,6 +14,11 @@ import pages.UserTablePage;
 public class ActionStep extends AbstractStep {
 
     public ActionStep(WebDriver driver) throws IOException {
+
+
+public class ActionStep extends AbstractStep {
+
+    public ActionStep(WebDriver driver) {
         super(driver);
     }
 
@@ -60,6 +65,7 @@ public class ActionStep extends AbstractStep {
     public void selectDropDownColor(WebElement element) {
         element.click();
     }
+
 
     public void clickServiceMenu() {
         mainPage.headerMenu()

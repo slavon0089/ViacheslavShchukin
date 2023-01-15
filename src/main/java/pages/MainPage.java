@@ -11,8 +11,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.WaitActions;
 
-
-
 public class MainPage {
 
     public static int countOfImagesOnMainPage = 4;

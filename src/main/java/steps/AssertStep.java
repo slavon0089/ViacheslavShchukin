@@ -21,6 +21,7 @@ public class AssertStep extends AbstractStep {
 
 
     public AssertStep(WebDriver driver) throws IOException {
+
         super(driver);
     }
 
