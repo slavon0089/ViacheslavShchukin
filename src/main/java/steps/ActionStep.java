@@ -61,11 +61,13 @@ public class ActionStep extends AbstractStep {
         element.click();
     }
 
+    @Step("click service menu")
     public void clickServiceMenu() {
         mainPage.headerMenu()
                 .clickServiceMenu();
     }
 
+    @Step("I click menu item")
     public void clickMenuItem(String item) {
         By serviceMenuItemPath = new By.ByXPath("//a[contains(text(),'" + item + "')]");
         WebElement serviceMenuItem = webDriver.findElement(serviceMenuItemPath);
@@ -79,10 +81,18 @@ public class ActionStep extends AbstractStep {
         difElPage = new DifferentElementsPage(webDriver);
     }
 
+    @Step("select click VIP checkbox")
     public void selectOneVipCheckbox(String checkBoxValue) {
         if (checkBoxValue.toLowerCase().contains("sergey ivan")) {
             userTablePage = new UserTablePage(webDriver);
             userTablePage.clickVipCheckBox("ivan");
         }
+    }
+
+    @Step("click on service menu item")
+    public void clickServiceMenuItem(String item) {
+        By serviceMenuItemPath = new By.ByXPath("//a[contains(text(),'" + item + "')]");
+        WebElement serviceMenuItem = webDriver.findElement(serviceMenuItemPath);
+        serviceMenuItem.click();
     }
 }
