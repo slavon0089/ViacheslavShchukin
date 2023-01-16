@@ -1,5 +1,6 @@
 package steps;
 
+import io.cucumber.java.en.When;
 import io.qameta.allure.Step;
 import java.io.IOException;
 import org.openqa.selenium.By;
@@ -9,6 +10,7 @@ import pages.DifferentElementsPage;
 import pages.MainPage;
 import pages.ServiceMenu;
 import pages.UserTablePage;
+import users.RomanIovlev;
 
 
 public class ActionStep extends AbstractStep {
@@ -95,4 +97,13 @@ public class ActionStep extends AbstractStep {
         WebElement serviceMenuItem = webDriver.findElement(serviceMenuItemPath);
         serviceMenuItem.click();
     }
+
+    @Step("I logged as user")
+    public void loginAsUser(String user) throws IOException {
+        mainPage = new MainPage(webDriver);
+        RomanIovlev romanIovlev = new RomanIovlev();
+        performLogin(romanIovlev.userName, romanIovlev.password);
+
+    }
+
 }

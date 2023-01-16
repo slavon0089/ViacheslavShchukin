@@ -9,7 +9,6 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import java.io.IOException;
 import java.util.List;
-
 import org.testng.annotations.Test;
 
 public class ExerciseTwoTest extends AbstractTest {

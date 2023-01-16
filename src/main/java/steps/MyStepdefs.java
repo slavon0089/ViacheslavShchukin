@@ -40,12 +40,13 @@ public class MyStepdefs extends AbstractStep {
     }
 
     @Before
-    public void before(){
+    public void before() {
         WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
+
     @Given("I open website")
     public void openWebsite() {
         actionStep.openWebSite(URL_HOME_PAGE);
@@ -103,10 +104,7 @@ public class MyStepdefs extends AbstractStep {
 
     @When("I login as user {string}")
     public void loginAsUser(String user) throws IOException {
-        mainPage = new MainPage(webDriver);
-        RomanIovlev romanIovlev = new RomanIovlev();
-        actionStep.performLogin(romanIovlev.userName, romanIovlev.password);
-        assertThat(mainPage.userLogged().equals(user.toUpperCase()));
+        actionStep.loginAsUser(user);
     }
 
     @When("I click on {string} button in Header")
