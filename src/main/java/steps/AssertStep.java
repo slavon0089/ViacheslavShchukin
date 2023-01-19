@@ -88,6 +88,14 @@ public class AssertStep extends AbstractStep {
         }
     }
 
+    @Step("I check log row and value is corresponded to the selected value.")
+    public void assertLogsForElements(DataTable dataTable) {
+        List<String> logsOptions = dataTable.asList();
+        for (int i = 0; i < logsOptions.size(); i++) {
+            Assertions.assertThat(difElPage.logs.get(i).getText()).contains(logsOptions.get(i));
+        }
+    }
+
     @Step("assert numbers of dropdowns")
     public void assertNumberTypeDropdowns(int countDropdowns) {
         userTablePage = new UserTablePage(webDriver);

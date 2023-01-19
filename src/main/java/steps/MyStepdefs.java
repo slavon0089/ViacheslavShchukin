@@ -6,17 +6,14 @@ import static pages.MainPage.URL_HOME_PAGE;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.io.IOException;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 
 public class MyStepdefs extends AbstractStep {
 
@@ -48,7 +45,7 @@ public class MyStepdefs extends AbstractStep {
 
     @Given("I open JDI GitHub site")
     public void openJdiGitHubWebsite() {
-       given.openJdiGitHubWebsite(URL_HOME_PAGE);
+        given.openJdiGitHubWebsite(URL_HOME_PAGE);
     }
 
     @When("I login as user Roman Iovlev")
@@ -86,10 +83,10 @@ public class MyStepdefs extends AbstractStep {
         when.selectDropdownYellow();
     }
 
-//    @Then("logs are displayed")
-//    public void logsAreDisplayed(DataTable dataTable) {
-//        then.logsAreDisplayed(dataTable);
-//    }
+    @Then("logs are displayed")
+    public void logsAreDisplayed(DataTable dataTable) {
+        then.logsAreDisplayed(dataTable);
+    }
 
     @When("I login as user {string}")
     public void loginAsUser(String user) throws IOException {
@@ -98,7 +95,7 @@ public class MyStepdefs extends AbstractStep {
 
     @When("I click on {string} button in Header")
     public void clickOnButtonInHeader(String item) {
-   when.clickOnButtonInHeader(item);
+        when.clickOnButtonInHeader(item);
     }
 
     @When("I click on {string} button in Service dropdown")
@@ -157,8 +154,4 @@ public class MyStepdefs extends AbstractStep {
         webDriver = null;
     }
 
-    @Then("logs are displayed")
-    public void logsAreDisplayed() {
-        then.logsAreDisplayed();
-    }
 }

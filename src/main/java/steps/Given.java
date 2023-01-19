@@ -20,13 +20,13 @@ public class Given {
     }
 
     @Step("I open website")
-    public void openWebsite(String URL) {
-        actionStep.openWebSite(URL);
+    public void openWebsite(String url) {
+        actionStep.openWebSite(url);
     }
 
     @Step("I open JDI GitHub site")
-    public void openJdiGitHubWebsite(String URL) {
-        actionStep.openWebSite(URL);
+    public void openJdiGitHubWebsite(String url) {
+        actionStep.openWebSite(url);
     }
 
 

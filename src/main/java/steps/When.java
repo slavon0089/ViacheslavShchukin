@@ -8,7 +8,7 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import pages.ServiceMenu;
 
-public class When extends AbstractStep{
+public class When extends AbstractStep {
     ActionStep actionStep = new ActionStep(webDriver);
 
 
@@ -31,23 +31,28 @@ public class When extends AbstractStep{
         actionStep.selectCheckbox(difElPage.checkBoxWater);
         actionStep.selectCheckbox(difElPage.checkBoxWind);
     }
+
     @Step("I select radiobutton Selen")
     public void selectRadiobuttonSelen() {
         actionStep.selectRadioButton(difElPage.radioButtonSelen);
     }
+
     @Step("select dropdown Yellow")
     public void selectDropdownYellow() {
         actionStep.selectDropDownColor(difElPage.dropdownYellow);
     }
+
     @Step("I login as user {string}")
     public void loginAsUser(String user) throws IOException {
         actionStep.loginAsUser(user);
     }
+
     @Step("I click on button in Header")
     public void clickOnButtonInHeader(String item) {
-                actionStep.clickMenuItem(item);
-                serviceMenu = new ServiceMenu(webDriver);
+        actionStep.clickMenuItem(item);
+        serviceMenu = new ServiceMenu(webDriver);
     }
+
     @Step("I click on button in Service dropdown")
     public void clickOnButtonInServiceDropdown(String item) {
         actionStep.clickServiceMenuItem(item);
