@@ -123,7 +123,7 @@ public class AssertStep extends AbstractStep {
 
     @Step("assert number user description")
     public void assertNumberUserDescription(DataTable dataTable) {
-        List<List<String>> userTable = dataTable.cells().subList(1, 7);
+        List<List<String>> userTable = dataTable.rows(1).cells();
         List<String> numbers = new ArrayList<>();
         List<String> names = new ArrayList<>();
         List<String> desc = new ArrayList<>();
