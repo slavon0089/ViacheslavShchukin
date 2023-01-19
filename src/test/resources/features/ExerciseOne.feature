@@ -11,8 +11,4 @@ Feature: Make some changes on website?
     And I select radiobutton Selen
     And select dropdown Yellow
     And logs are displayed
-#      | Colors: value changed to Yellow  |
-#      | metal: value changed to Selen    |
-#      | Wind: condition changed to true  |
-#      | Water: condition changed to true |
 
