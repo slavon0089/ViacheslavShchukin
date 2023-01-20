@@ -22,7 +22,7 @@ public class AssertStep extends AbstractStep {
 
     public AssertStep(WebDriver driver) throws IOException {
 
-        super(driver);
+        super();
     }
 
     @Step("Assert Browser title Home Page")

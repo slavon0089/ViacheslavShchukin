@@ -16,7 +16,7 @@ import users.RomanIovlev;
 public class ActionStep extends AbstractStep {
 
     public ActionStep(WebDriver driver) throws IOException {
-        super(driver);
+        super();
     }
 
     @Step(" I Open test site by URL")

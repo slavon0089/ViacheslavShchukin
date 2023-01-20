@@ -28,15 +28,13 @@ public class AbstractStep {
     public String password = getUserPasswordFromProperties();
     public String userFullName = getUserFullNameFromProperties();
 
-
-    protected AbstractStep(WebDriver webDriver) throws IOException {
-
-    public static DifferentElementsPage difElPage;
-
-
-    protected AbstractStep(WebDriver webDriver) {
-
-        this.webDriver = webDriver;
+    public AbstractStep() throws IOException {
     }
+
+    protected AbstractStep(WebDriver webDriver) throws IOException {}
+    //   // public static DifferentElementsPage difElPage;
+    //    protected AbstractStep(WebDriver webDriver) {
+    //        this.webDriver = webDriver;
+    //    }
 
 }
