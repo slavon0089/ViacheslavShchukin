@@ -18,6 +18,7 @@ public class AbstractStep {
     public static WebDriver webDriver;
     SoftAssert softAssert = new SoftAssert();
     public MainPage mainPage;
+
     public ServiceMenu serviceMenu;
     public static DifferentElementsPage difElPage;
 
@@ -29,6 +30,12 @@ public class AbstractStep {
 
 
     protected AbstractStep(WebDriver webDriver) throws IOException {
+
+    public static DifferentElementsPage difElPage;
+
+
+    protected AbstractStep(WebDriver webDriver) {
+
         this.webDriver = webDriver;
     }
 
