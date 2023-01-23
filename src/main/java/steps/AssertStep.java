@@ -22,7 +22,7 @@ public class AssertStep extends AbstractStep {
 
     public AssertStep(WebDriver driver) throws IOException {
 
-        super(driver);
+        super();
     }
 
     @Step("Assert Browser title Home Page")
@@ -89,6 +89,15 @@ public class AssertStep extends AbstractStep {
         }
     }
 
+    @Step("I check log row and value is corresponded to the selected value.")
+    public void assertLogsForElements(DataTable dataTable) {
+        List<String> logsOptions = dataTable.asList();
+        for (int i = 0; i < logsOptions.size(); i++) {
+            Assertions.assertThat(difElPage.logs.get(i).getText()).contains(logsOptions.get(i));
+        }
+    }
+
+    @Step("assert numbers of dropdowns")
     public void assertNumberTypeDropdowns(int countDropdowns) {
         userTablePage = new UserTablePage(webDriver);
         Assertions.assertThat(userTablePage.listOfDropdowns.size()).isEqualTo(countDropdowns);
@@ -97,6 +106,7 @@ public class AssertStep extends AbstractStep {
         }
     }
 
+    @Step("assert number type of users")
     public void assertNumberTypeUsers(int countUsers) {
         Assertions.assertThat(userTablePage.listOfUsers.size()).isEqualTo(countUsers);
         for (int i = 0; i < countUsers; i++) {
@@ -104,6 +114,7 @@ public class AssertStep extends AbstractStep {
         }
     }
 
+    @Step("assert description under images")
     public void assertDescriptionsUnderImages(int countImages) {
         Assertions.assertThat(userTablePage.descriptionsUnderImages.size()).isEqualTo(countImages);
         for (int i = 0; i < countImages; i++) {
@@ -111,6 +122,7 @@ public class AssertStep extends AbstractStep {
         }
     }
 
+    @Step("assert checkboxes under images")
     public void assertCheckboxesUnderImages(int countCheckboxes) {
         Assertions.assertThat(userTablePage.checkboxesUnderImages.size()).isEqualTo(countCheckboxes);
         for (int i = 0; i < countCheckboxes; i++) {
@@ -118,8 +130,9 @@ public class AssertStep extends AbstractStep {
         }
     }
 
+    @Step("assert number user description")
     public void assertNumberUserDescription(DataTable dataTable) {
-        List<List<String>> userTable = dataTable.cells().subList(1, 7);
+        List<List<String>> userTable = dataTable.rows(1).cells();
         List<String> numbers = new ArrayList<>();
         List<String> names = new ArrayList<>();
         List<String> desc = new ArrayList<>();
@@ -141,11 +154,11 @@ public class AssertStep extends AbstractStep {
                 .map(WebElement::getText)
                 .map(String::trim)
                 .map(n -> n.replaceAll("\\s", " "))
-                //.map(n -> n.replaceAll("Vip", " "))
                 .map(String::trim)
                 .collect(Collectors.toList())).isEqualTo(desc);
     }
 
+    @Step("assert dropdown contains for User Roman")
     public void assertDropListContainsValuesForUserRoman(DataTable dataTable) {
 
         List<String> dropdownOptions = dataTable.asList();
@@ -154,10 +167,15 @@ public class AssertStep extends AbstractStep {
         }
     }
 
+    @Step("assert logs")
     public void assertLogText(String logText) {
         By logPath = new By.ByXPath("//li[contains(. ,'" + logText + "')]");
         WebElement log = webDriver.findElement(logPath);
         Assert.assertTrue(log.isDisplayed());
+    }
+
+    public void userLogged(String user) {
+        assertThat(mainPage.userLogged().equals(user.toUpperCase()));
     }
 
 }

@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"com/epam/tc/hw5/step"},
+        glue = {"steps"},
         publish = true)
 
 public class RunCucumberTest extends AbstractTestNGCucumberTests {

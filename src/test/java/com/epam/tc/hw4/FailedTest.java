@@ -1,12 +1,9 @@
 package com.epam.tc.hw4;
 
-import static pages.DifferentElementsPage.checkBoxWater;
-import static pages.DifferentElementsPage.checkBoxWind;
-import static pages.DifferentElementsPage.dropdownBlue;
-import static pages.DifferentElementsPage.radioButtonSilver;
-import static pages.DifferentElementsPage.textForLogs;
+import static com.epam.tc.hw4.ExerciseTwoTest.textForLogs;
 import static pages.MainPage.HOME_PAGE;
 import static pages.MainPage.URL_HOME_PAGE;
+import static steps.AbstractStep.difElPage;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -40,20 +37,20 @@ public class FailedTest extends AbstractTest {
         //5. Open through the header menu Service -> Different Elements Page
         actionStep.openDifferentElementsPage();
         //6. Select checkboxes
-        actionStep.selectCheckbox(checkBoxWater);
-        actionStep.selectCheckbox(checkBoxWind);
+        actionStep.selectCheckbox(difElPage.checkBoxWater);
+        actionStep.selectCheckbox(difElPage.checkBoxWind);
         //7. Select radio
-        actionStep.selectRadioButton(radioButtonSilver);
+        actionStep.selectRadioButton(difElPage.radioButtonSilver);
         //8. Select in dropdown
-        actionStep.selectDropDownColor(dropdownBlue);
+        actionStep.selectDropDownColor(difElPage.dropdownBlue);
         //9. Assert that
         //• for each checkbox there is an individual log row and value is corresponded to the status of checkbox
         //• for radio button there is a log row and value is corresponded to the status of radio button
         //• for dropdown there is a log row and value is corresponded to the selected value.
-        assertStep.assertElementIsSelected(checkBoxWater);
-        assertStep.assertElementIsSelected(checkBoxWind);
-        assertStep.assertElementIsSelected(radioButtonSilver);
-        assertStep.assertElementIsSelected(dropdownBlue);
+        assertStep.assertElementIsSelected(difElPage.checkBoxWater);
+        assertStep.assertElementIsSelected(difElPage.checkBoxWind);
+        assertStep.assertElementIsSelected(difElPage.radioButtonSilver);
+        assertStep.assertElementIsSelected(difElPage.dropdownBlue);
         assertStep.assertLogsForElements(textForLogs);
     }
 }

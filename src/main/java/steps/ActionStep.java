@@ -1,5 +1,6 @@
 package steps;
 
+import io.cucumber.java.en.When;
 import io.qameta.allure.Step;
 import java.io.IOException;
 import org.openqa.selenium.By;
@@ -9,17 +10,13 @@ import pages.DifferentElementsPage;
 import pages.MainPage;
 import pages.ServiceMenu;
 import pages.UserTablePage;
+import users.RomanIovlev;
 
 
 public class ActionStep extends AbstractStep {
 
     public ActionStep(WebDriver driver) throws IOException {
-
-
-public class ActionStep extends AbstractStep {
-
-    public ActionStep(WebDriver driver) {
-        super(driver);
+        super();
     }
 
     @Step(" I Open test site by URL")
@@ -66,12 +63,13 @@ public class ActionStep extends AbstractStep {
         element.click();
     }
 
-
+    @Step("click service menu")
     public void clickServiceMenu() {
         mainPage.headerMenu()
                 .clickServiceMenu();
     }
 
+    @Step("I click menu item")
     public void clickMenuItem(String item) {
         By serviceMenuItemPath = new By.ByXPath("//a[contains(text(),'" + item + "')]");
         WebElement serviceMenuItem = webDriver.findElement(serviceMenuItemPath);
@@ -85,10 +83,27 @@ public class ActionStep extends AbstractStep {
         difElPage = new DifferentElementsPage(webDriver);
     }
 
+    @Step("select click VIP checkbox")
     public void selectOneVipCheckbox(String checkBoxValue) {
         if (checkBoxValue.toLowerCase().contains("sergey ivan")) {
             userTablePage = new UserTablePage(webDriver);
             userTablePage.clickVipCheckBox("ivan");
         }
     }
+
+    @Step("click on service menu item")
+    public void clickServiceMenuItem(String item) {
+        By serviceMenuItemPath = new By.ByXPath("//a[contains(text(),'" + item + "')]");
+        WebElement serviceMenuItem = webDriver.findElement(serviceMenuItemPath);
+        serviceMenuItem.click();
+    }
+
+    @Step("I logged as user")
+    public void loginAsUser(String user) throws IOException {
+        mainPage = new MainPage(webDriver);
+        RomanIovlev romanIovlev = new RomanIovlev();
+        performLogin(romanIovlev.userName, romanIovlev.password);
+
+    }
+
 }
