@@ -9,7 +9,7 @@ import com.epam.jdi.light.ui.html.elements.common.Button;
 import com.epam.jdi.light.ui.html.elements.complex.RadioButtons;
 import jdi.entities.MetalsAndColors;
 
-public class MetalsAndColorsForm extends Form<MetalsAndColorsForm> {
+public class MetalsAndColorsForm extends Form<MetalsAndColors> {
 
     @FindBy(css = "#elements-checklist input")
     public Checklist elementsOfEarth;
@@ -36,7 +36,8 @@ public class MetalsAndColorsForm extends Form<MetalsAndColorsForm> {
     private Button submit;
 
 
-    public void fillForm(MetalsAndColors metalsAndColors) {
+    @Override
+    public void fill(MetalsAndColors metalsAndColors) {
         oddNumbers.select(metalsAndColors.summary.get(0));
         evenNumbers.select(metalsAndColors.summary.get(1));
         metalsAndColors.elements.forEach(elementsOfEarth::select);

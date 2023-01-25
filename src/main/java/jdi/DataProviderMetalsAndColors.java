@@ -11,10 +11,9 @@ import org.testng.annotations.DataProvider;
 
 public class DataProviderMetalsAndColors {
 
-    Object[][] object;
-
     @DataProvider(name = "DataProviderJson")
     public Object[][] dataProviderMetalColor() {
+        Object[][] object = new Object[0][];
         String path = "src/test/resources/JdiDataSet.json";
         {
             try {
@@ -29,8 +28,9 @@ public class DataProviderMetalsAndColors {
                     object[i][0] = entry.getValue();
                     i++;
                 }
+                fileInputStream.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                System.out.println("error of Data providing");
             }
         }
         return object;

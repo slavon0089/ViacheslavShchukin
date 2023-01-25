@@ -13,11 +13,13 @@ import org.testng.annotations.Test;
 
 
 public class JdiSiteTest {
+    public static final User ROMAN = new User("Roman", "Jdi1234", "ROMAN IOVLEV");
+
     @BeforeSuite(alwaysRun = true)
     public void beforeSuite() {
         PageFactory.initSite(JdiSite.class);
         JdiSite.openHomePage();
-        JdiSite.login(User.ROMAN);
+        JdiSite.login(ROMAN);
     }
 
     @AfterSuite(alwaysRun = true)
@@ -28,7 +30,7 @@ public class JdiSiteTest {
 
     @Test (dataProvider = "DataProviderJson", dataProviderClass = DataProviderMetalsAndColors.class)
     public void jdiHomepageTest(MetalsAndColors metalsAndColors) {
-        JdiSite.homePage.userName.is().text(User.ROMAN.getFullName());
+        JdiSite.homePage.userName.is().text(ROMAN.getFullName());
         JdiSite.openMetalsAndColorsPage();
         JdiSite.metalsAndColorsPage.fillMetalAndColorForm(metalsAndColors);
         JdiSite.verifyResultLog(metalsAndColors);

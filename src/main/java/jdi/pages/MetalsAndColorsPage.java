@@ -18,18 +18,21 @@ public class MetalsAndColorsPage extends WebPage {
     private WebList log;
 
     public void fillMetalAndColorForm(MetalsAndColors metalsAndColors) {
-        metalsAndColorsForm.fillForm(metalsAndColors);
+        metalsAndColorsForm.fill(metalsAndColors);
     }
 
     public void assertResultLog(MetalsAndColors metalsAndColors) {
-        Assertions.assertThat(metalsAndColors.getResultLog()).hasSameElementsAs(actualResultLog());
+        Assertions.assertThat(actualResultLog()).hasSameElementsAs(metalsAndColors.getResultLog());
     }
 
     public List<String> actualResultLog() {
         List<String> result = new ArrayList<>();
-        log.forEach(els -> {
-            result.add(els.getText());
+
+        log.stream()
+               .forEach(els -> {
+                   result.add(els.getText());
         });
+
         return result;
     }
 }
