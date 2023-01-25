@@ -3,6 +3,7 @@ package jdi;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +13,7 @@ import org.testng.annotations.DataProvider;
 public class DataProviderMetalsAndColors {
 
     @DataProvider(name = "DataProviderJson")
-    public Object[][] dataProviderMetalColor() {
+    public Object[][] dataProviderMetalColor() throws FileNotFoundException {
         Object[][] object = new Object[0][];
         String path = "src/test/resources/JdiDataSet.json";
         {
@@ -28,12 +29,9 @@ public class DataProviderMetalsAndColors {
                     object[i][0] = entry.getValue();
                     i++;
                 }
-                if (object[0][0].equals("")){
-                    throw new IOException ("error of Data providing");
-                }
                 fileInputStream.close();
             } catch (Exception e) {
-                System.out.println("error of Data providing");
+                throw new FileNotFoundException("file not found");
             }
 
         }
