@@ -31,7 +31,7 @@ public class MetalsAndColorsPage extends WebPage {
         log.stream()
                .forEach(els -> {
                    result.add(els.getText());
-        });
+               });
 
         return result;
     }
