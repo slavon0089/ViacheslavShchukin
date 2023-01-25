@@ -28,10 +28,14 @@ public class DataProviderMetalsAndColors {
                     object[i][0] = entry.getValue();
                     i++;
                 }
+                if (object[0][0].equals("")){
+                    throw new IOException ("error of Data providing");
+                }
                 fileInputStream.close();
-            } catch (IOException e) {
+            } catch (Exception e) {
                 System.out.println("error of Data providing");
             }
+
         }
         return object;
     }
