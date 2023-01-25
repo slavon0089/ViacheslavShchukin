@@ -1,0 +1,37 @@
+{
+  "data_1": {
+    "summary": [1,2],
+    "elements": ["Water", "Fire"],
+    "color": "Red",
+    "metals": "Gold",
+    "vegetables": ["Cucumber"]
+  },
+  "data_2": {
+    "summary": [1,8],
+    "elements": ["Earth", "Wind"],
+    "color": "Green",
+    "metals": "Silver",
+    "vegetables": ["Tomato", "Vegetables"]
+  },
+  "data_3": {
+    "summary": [7,8],
+    "elements": ["Earth", "Fire"],
+    "color": "Blue",
+    "metals": "Bronze",
+    "vegetables": ["Tomato", "Vegetables", "Onion"]
+  },
+  "data_4": {
+    "summary": [5,6],
+    "elements": ["Water", "Wind"],
+    "color": "Yellow",
+    "metals": "Selen",
+    "vegetables": ["Cucumber", "Onion"]
+  },
+  "data_5": {
+    "summary": [7,2],
+    "elements": ["Water", "Earth", "Wind", "Fire"],
+    "color": "Blue",
+    "metals": "Selen",
+    "vegetables": ["Cucumber", "Tomato", "Vegetables", "Onion"]
+  }
+}
