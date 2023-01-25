@@ -1,37 +1,43 @@
-package com.epam.tc.hw4;
+package com.epam.tc.hw6;
 
-import static com.epam.tc.hw4.ExerciseTwoTest.textForLogs;
+//import static pages.DifferentElementsPage.checkBoxWater;
+//import static pages.DifferentElementsPage.checkBoxWind;
+//import static pages.DifferentElementsPage.dropdownBlue;
+//import static pages.DifferentElementsPage.radioButtonSilver;
+//import static pages.DifferentElementsPage.textForLogs;
 import static pages.MainPage.HOME_PAGE;
 import static pages.MainPage.URL_HOME_PAGE;
 import static steps.AbstractStep.difElPage;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import java.io.IOException;
 import java.util.List;
 import org.testng.annotations.Test;
 
-public class FailedTest extends AbstractTest {
-    private static int countOfImagesOnMainPage = 4;
-    private static List<String> textUnderImages = List
-            .of("To include good practices\nand ideas from successfulEPAM project",
-                    "To be flexible and\ncustomizable",
-                    "To be multiplatform",
-                    "Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
 
-    public FailedTest() throws IOException {
+public class ExerciseTwoTest extends AbstractTest {
+    public static List<String> textForLogs = List
+        .of("Colors: value changed to Blue",
+            "metal: value changed to Silver",
+            "Wind: condition changed to true",
+            "Water: condition changed to true");
+
+    public ExerciseTwoTest() throws IOException {
     }
 
-    @Test (description = "this test should be failed")
+    @Test  (description = "second test with login")
+    @Description(value = "second test with login, menu and new page")
     @Feature("feature - worked website")
-    @Story("Story3 - broken")
-    public void exercise() {
+    @Story("Story2")
+    public void exercise()  {
         //1. Open test site by URL
         actionStep.openWebSite(URL_HOME_PAGE);
         //2. Assert Browser title "Home Page"
         assertStep.assertBrowserTitle(HOME_PAGE);
         //3. Perform login
-        actionStep.performLogin(password, password);
+        actionStep.performLogin(user, password);
         //4. Assert Username is logged
         assertStep.assertUserIsLogged(userFullName);
         //5. Open through the header menu Service -> Different Elements Page

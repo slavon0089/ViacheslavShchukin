@@ -10,24 +10,29 @@ import utils.WaitActions;
 public class DifferentElementsPage {
 
     @FindBy(xpath = "//label[text()[contains(., ' Water')]]/*[@type='checkbox']")
-    public static WebElement checkBoxWater;
+    public WebElement checkBoxWater;
 
     @FindBy(xpath = "//label[text()[contains(., ' Wind')]]/*[@type='checkbox']")
-    public static WebElement checkBoxWind;
+    public WebElement checkBoxWind;
 
     @FindBy(xpath = "//label[text()[contains(., ' Silver')]]/*[@type='radio']")
-    public static WebElement radioButtonSilver;
+    public  WebElement radioButtonSilver;
+
+    @FindBy(xpath = "//label[text()[contains(., ' Selen')]]/*[@type='radio']")
+    public  WebElement radioButtonSelen;
 
     @FindBy(xpath = "//*[text()='Blue']")
-    public static WebElement dropdownBlue;
+    public  WebElement dropdownBlue;
+
+    @FindBy(xpath = "//*[text()='Yellow']")
+    public  WebElement dropdownYellow;
     @FindBy(css = ".panel-body-list.logs > li")
     public List<WebElement> logs;
 
-    public static List<String> textForLogs = List
-            .of("Colors: value changed to Blue",
-                    "metal: value changed to Silver",
-                    "Wind: condition changed to true",
-                    "Water: condition changed to true");
+
+
+
+
     WaitActions waitActions;
 
     public DifferentElementsPage(WebDriver driver1) {
